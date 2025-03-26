@@ -9,10 +9,10 @@ public class GameLogic{
     private int boardWidth, boardHeight; //these are the current height and width of the board
 
     //these locations are relative to the 5x5 array
-    private int boardWidthLoc1; //describes where leftmost of board is
-    private int boardHeightLoc1; //describes where top of board is
-    private int boardWidthLoc2; //describes where rightmost part of board is
-    private int boardHeightLoc2; //describes where bottom of board is
+    private int boardWidthLoc1 = 0; //describes where leftmost of board is
+    private int boardHeightLoc1 = 0; //describes where top of board is
+    private int boardWidthLoc2 = 4; //describes where rightmost part of board is
+    private int boardHeightLoc2 = 4; //describes where bottom of board is
 
 
     GameLogic(JPanel[][] panels, JFrame frame){
@@ -39,9 +39,8 @@ public class GameLogic{
                         //panels[XCoord][YCoord].removeAll();
                         //panels[XCoord][YCoord].getComponent(panels[XCoord][YCoord])
 
-                        if(panels[XCoord][YCoord].getComponentCount() == 0 && checkDimensions(boardWidthLoc1, boardWidthLoc2, boardHeightLoc1, boardHeightLoc2, XCoord, YCoord)){
+                        if(panels[XCoord][YCoord].getComponentCount() == 0 && checkDimensions(boardWidthLoc1, boardWidthLoc2, boardHeightLoc1, boardHeightLoc2, XCoord, YCoord)) {
                             placeMove(panels[XCoord][YCoord], fontSize, XCoord, YCoord);
-                            System.out.println(boardWidthLoc1 + " " + boardWidthLoc2 + " " + boardHeightLoc1 + " " + boardHeightLoc2);
                         }
 
                     }
@@ -65,17 +64,22 @@ public class GameLogic{
     }
 
     void placeMove(JPanel panels, int fontSize, int XCoord, int YCoord){
-        changeDimensions(panels,  boardWidth, boardHeight);
+        //hangeDimensions(panels,  boardWidth, boardHeight);
 
         if(firstPlayersTurn){
             placeX(panels, fontSize);
-            updateWidth();
-            updateHeight();
         } else {
             placeO(panels, fontSize);
-            updateWidth();
-            updateHeight();
         }
+
+        //these 2 if statements make sure that the playable board won't
+        if(boardWidthLoc1 != 2 && boardWidthLoc2 != 2) {
+            updateWidth(XCoord);
+        }
+        if(boardHeightLoc1 != 2 && boardHeightLoc2 != 2) {
+            updateHeight(YCoord);
+        }
+
         switchTurn();
     }
 
@@ -116,24 +120,46 @@ public class GameLogic{
 
     }
 
-    private int updateWidth(int boardWidth){
-        boardWidth = this.boardWidth;
-        return boardWidth;
+    private void updateWidth(int XCoord){
+        int firstMoveWidth = 2;
+        if(XCoord < firstMoveWidth){
+            boardWidthLoc2 = boardWidthLoc2 + (firstMoveWidth - XCoord);
+            System.out.println(boardWidthLoc2);
+        } else if(XCoord > firstMoveWidth){
+            boardWidthLoc1 = boardWidthLoc1 - (firstMoveWidth - XCoord);
+            System.out.println(boardWidthLoc1);
+        }
+        System.out.println("XCoord: " + XCoord);
+        System.out.println("boardWidthLoc1: " + boardWidthLoc1 + " " + "boardWidthLoc2: " + boardWidthLoc2);
+        //this.boardWidth = XCoord;
     }
 
-    private int updateHeight(int boardHeight){
-        boardHeight = this.boardHeight;
-        return boardHeight;
+    private void updateHeight(int YCoord){
+        int firstMoveheight = 2;
+        if(YCoord < firstMoveheight){
+            boardHeightLoc2 = boardHeightLoc2 - (firstMoveheight - YCoord);
+            System.out.println(boardHeightLoc2);
+        } else if(YCoord > firstMoveheight){
+            boardHeightLoc1 = boardHeightLoc1 + (firstMoveheight - YCoord);
+            System.out.println(boardHeightLoc1);
+        }
+        System.out.println("YCoord: " + YCoord);
+        System.out.println("boardHeightLoc1: " + boardHeightLoc1 + " " + "boardHeightLoc2: " + boardHeightLoc2);
+
+        // this.boardHeight = YCoord;
     }
 
+    /*
     void changeDimensions(JPanel panels, int boardWidth, int boardHeight){
         updateWidth(boardWidth);
         updateHeight(boardHeight);
     }
+    */
 
     //returns true if the dimensions of our move is valid ONLY by checking dimensions
-    private boolean checkDimensions(int borderWidth1, int borderWidth2, int borderHeight1, int borderHeight2, int XCoord, int YCoord){
-        return XCoord >= borderWidth1 && XCoord <= borderWidth2 && YCoord >= borderHeight1 && YCoord <= borderHeight2;
+    private boolean checkDimensions(int boardWidthLoc1, int boardWidthLoc2, int boardHeightLoc1, int boardHeightLoc2, int XCoord, int YCoord){
+        //System.out.println("XCoord: " + XCoord + " " + "YCoord: " + YCoord + " " + "boardWidthLoc1: " + boardWidthLoc1 + " " + "boardWidthLoc2: " + boardWidthLoc2 + " " + "boardHeightLoc1: " + boardHeightLoc1 + " " + "boardHeightLoc1: " + boardHeightLoc2);
+        return XCoord >= boardWidthLoc1 && XCoord <= boardWidthLoc2 && YCoord >= boardHeightLoc1 && YCoord <= boardHeightLoc2;
     }
 
 
