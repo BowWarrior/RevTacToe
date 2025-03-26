@@ -123,10 +123,10 @@ public class GameLogic{
     private void updateWidth(int XCoord){
         int firstMoveWidth = 2;
         if(XCoord < firstMoveWidth){
-            boardWidthLoc2 = boardWidthLoc2 + (firstMoveWidth - XCoord);
+            boardWidthLoc2 = boardWidthLoc2 - (firstMoveWidth - XCoord);
             System.out.println(boardWidthLoc2);
         } else if(XCoord > firstMoveWidth){
-            boardWidthLoc1 = boardWidthLoc1 - (firstMoveWidth - XCoord);
+            boardWidthLoc1 = boardWidthLoc1 + (XCoord - firstMoveWidth);
             System.out.println(boardWidthLoc1);
         }
         System.out.println("XCoord: " + XCoord);
@@ -140,12 +140,13 @@ public class GameLogic{
             boardHeightLoc2 = boardHeightLoc2 - (firstMoveheight - YCoord);
             System.out.println(boardHeightLoc2);
         } else if(YCoord > firstMoveheight){
-            boardHeightLoc1 = boardHeightLoc1 + (firstMoveheight - YCoord);
+            boardHeightLoc1 = boardHeightLoc1 + (YCoord - firstMoveheight);
             System.out.println(boardHeightLoc1);
         }
         System.out.println("YCoord: " + YCoord);
         System.out.println("boardHeightLoc1: " + boardHeightLoc1 + " " + "boardHeightLoc2: " + boardHeightLoc2);
-
+        System.out.println("difference between width1 and width2 = " + (boardWidthLoc2 - boardWidthLoc1));
+        System.out.println("difference between height1 and height2 = " + (boardHeightLoc2 - boardHeightLoc1));
         // this.boardHeight = YCoord;
     }
 
