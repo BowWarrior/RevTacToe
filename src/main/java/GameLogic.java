@@ -39,7 +39,7 @@ public class GameLogic{
                         //board[XCoord][YCoord].removeAll();
                         //board[XCoord][YCoord].getComponent(board[XCoord][YCoord])
                         JPanel tempPanel = board[XCoord][YCoord];
-                        if(board[XCoord][YCoord].getComponentCount() == 0 && checkDimensions(boardWidthLoc1, boardWidthLoc2, boardHeightLoc1, boardHeightLoc2, XCoord, YCoord)) {
+                        if(/*hi*/board[XCoord][YCoord].getComponentCount() == 0 && checkDimensions(boardWidthLoc1, boardWidthLoc2, boardHeightLoc1, boardHeightLoc2, XCoord, YCoord)) {
                             placeMove(board[XCoord][YCoord], fontSize, XCoord, YCoord, board);
                         }
 
