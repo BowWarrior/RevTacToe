@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: GameBoardTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.066 s <<< FAILURE! -- in GameBoardTest
+GameBoardTest.testClickOnTopLeftPanel -- Time elapsed: 0.029 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.assertj.swing.fixture.FrameFixture.panel(String)" because "this.window" is null
+	at GameBoardTest.testClickOnTopLeftPanel(GameBoardTest.java:35)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
