@@ -6,7 +6,7 @@ import java.awt.event.MouseEvent;
 
 public class GameLogic{
     public boolean firstPlayersTurn = true;
-
+//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
     //these locations are relative to the 5x5 array
     private int boardWidthLoc1 = 0; //describes where leftmost of board is
     private int boardHeightLoc1 = 0; //describes where top of board is
