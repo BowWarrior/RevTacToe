@@ -10,9 +10,10 @@ to push to github in terminal:
 
 1. cd into the folder
 2. run 'git add .'
-3. run 'git push origin changes'
-4. check I'm on the '*main' branch using 'git branch'. If not, run 'git checkout main'
-5. git pull origin 'changes'
+3. run 'git commit -m "message to github here"'
+4. run 'git push origin changes'
+5. check I'm on the '*main' branch using 'git branch'. If not, run 'git checkout main'
+6. git pull origin 'changes'
 
 
  */
