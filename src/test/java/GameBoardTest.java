@@ -5,6 +5,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
+
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.*;
 
@@ -322,11 +324,354 @@ public class GameBoardTest {
         assertPanelNotEmpty(2, 1);
     }
 
+    @Test
+    void testInnerWidthChangerLeft(){
+        clickPanel(2, 2);
+        assertPanelNotEmpty(2, 2);
+
+        clickPanel(1, 2);
+        assertPanelNotEmpty(1, 2);
+
+        clickPanel(4, 0);
+        assertPanelEmpty(4, 0);
+
+        clickPanel(4, 1);
+        assertPanelEmpty(4, 1);
+
+        clickPanel(4, 2);
+        assertPanelEmpty(4, 2);
+
+        clickPanel(4, 3);
+        assertPanelEmpty(4, 3);
+
+        clickPanel(4, 4);
+        assertPanelEmpty(4, 4);
+    }
+
+    @Test
+    void testInnerWidthChangerRight(){
+        clickPanel(2, 2);
+        assertPanelNotEmpty(2, 2);
+
+        clickPanel(3, 2);
+        assertPanelNotEmpty(3, 2);
+
+        clickPanel(0, 0);
+        assertPanelEmpty(4, 0);
+
+        clickPanel(0, 1);
+        assertPanelEmpty(0, 1);
+
+        clickPanel(0, 2);
+        assertPanelEmpty(0, 2);
+
+        clickPanel(0, 3);
+        assertPanelEmpty(0, 3);
+
+        clickPanel(0, 4);
+        assertPanelEmpty(0, 4);
+    }
+
+    @Test
+    void testOuterWidthChangerLeft(){
+        clickPanel(2, 2);
+        assertPanelNotEmpty(2, 2);
+
+        clickPanel(0, 2);
+        assertPanelNotEmpty(0, 2);
+
+        clickPanel(3, 0);
+        assertPanelEmpty(3, 0);
+
+        clickPanel(3, 1);
+        assertPanelEmpty(3, 1);
+
+        clickPanel(3, 2);
+        assertPanelEmpty(3, 2);
+
+        clickPanel(3, 3);
+        assertPanelEmpty(3, 3);
+
+        clickPanel(3, 4);
+        assertPanelEmpty(3, 4);
+
+        clickPanel(4, 0);
+        assertPanelEmpty(4, 0);
+
+        clickPanel(4, 1);
+        assertPanelEmpty(4, 1);
+
+        clickPanel(4, 2);
+        assertPanelEmpty(4, 2);
+
+        clickPanel(4, 3);
+        assertPanelEmpty(4, 3);
+
+        clickPanel(4, 4);
+        assertPanelEmpty(4, 4);
+
+    }
+
+    @Test
+    void testOuterWidthChangerRight(){
+        clickPanel(2, 2);
+        assertPanelNotEmpty(2, 2);
+
+        clickPanel(4, 2);
+        assertPanelNotEmpty(4, 2);
+
+        clickPanel(1, 0);
+        assertPanelEmpty(1, 0);
+
+        clickPanel(1, 1);
+        assertPanelEmpty(1, 1);
+
+        clickPanel(1, 2);
+        assertPanelEmpty(1, 2);
+
+        clickPanel(1, 3);
+        assertPanelEmpty(1, 3);
+
+        clickPanel(1, 4);
+        assertPanelEmpty(1, 4);
+
+        clickPanel(0, 0);
+        assertPanelEmpty(0, 0);
+
+        clickPanel(0, 1);
+        assertPanelEmpty(0, 1);
+
+        clickPanel(0, 2);
+        assertPanelEmpty(0, 2);
+
+        clickPanel(0, 3);
+        assertPanelEmpty(0, 3);
+
+        clickPanel(0, 4);
+        assertPanelEmpty(0, 4);
+    }
+
+    @Test
+    void testInnerHeightChangerUp(){
+        clickPanel(2, 2);
+        assertPanelNotEmpty(2, 2);
+
+        clickPanel(2, 1);
+        assertPanelNotEmpty(2, 1);
+
+        clickPanel(0, 4);
+        assertPanelEmpty(0, 1);
+
+        clickPanel(1, 4);
+        assertPanelEmpty(1, 4);
+
+        clickPanel(2, 4);
+        assertPanelEmpty(2, 4);
+
+        clickPanel(3, 4);
+        assertPanelEmpty(3, 4);
+
+        clickPanel(4, 4);
+        assertPanelEmpty(4, 4);
+    }
+
+    @Test
+    void testInnerHeightChangerDown(){
+        clickPanel(2, 2);
+        assertPanelNotEmpty(2, 2);
+
+        clickPanel(2, 3);
+        assertPanelNotEmpty(2, 3);
+
+        clickPanel(0, 0);
+        assertPanelEmpty(0, 0);
+
+        clickPanel(1, 0);
+        assertPanelEmpty(1, 0);
+
+        clickPanel(2, 0);
+        assertPanelEmpty(2, 0);
+
+        clickPanel(3, 0);
+        assertPanelEmpty(3, 0);
+
+        clickPanel(4, 0);
+        assertPanelEmpty(4, 0);
+    }
+
+    @Test
+    void testOuterHeightChangerUp(){
+        clickPanel(2, 2);
+        assertPanelNotEmpty(2, 2);
+
+        clickPanel(2, 0);
+        assertPanelNotEmpty(2, 0);
+
+        clickPanel(0, 3);
+        assertPanelEmpty(0, 3);
+
+        clickPanel(1, 3);
+        assertPanelEmpty(1, 3);
+
+        clickPanel(2, 3);
+        assertPanelEmpty(2, 3);
+
+        clickPanel(3, 3);
+        assertPanelEmpty(3, 3);
+
+        clickPanel(4, 3);
+        assertPanelEmpty(4, 3);
+
+        clickPanel(0, 4);
+        assertPanelEmpty(0, 4);
+
+        clickPanel(1, 4);
+        assertPanelEmpty(1, 4);
+
+        clickPanel(2, 4);
+        assertPanelEmpty(2, 4);
+
+        clickPanel(3, 4);
+        assertPanelEmpty(3, 4);
+
+        clickPanel(4, 4);
+        assertPanelEmpty(4, 4);
+
+    }
+
+    @Test
+    void testOuterHeightChangerDown(){
+        clickPanel(2, 2);
+        assertPanelNotEmpty(2, 2);
+
+        clickPanel(2, 4);
+        assertPanelNotEmpty(2, 4);
+
+        clickPanel(0, 0);
+        assertPanelEmpty(0, 0);
+
+        clickPanel(1, 0);
+        assertPanelEmpty(1, 0);
+
+        clickPanel(2, 0);
+        assertPanelEmpty(2, 0);
+
+        clickPanel(3, 0);
+        assertPanelEmpty(3, 0);
+
+        clickPanel(4, 0);
+        assertPanelEmpty(4, 0);
+
+        clickPanel(0, 1);
+        assertPanelEmpty(0, 1);
+
+        clickPanel(1, 1);
+        assertPanelEmpty(1, 1);
+
+        clickPanel(2, 1);
+        assertPanelEmpty(2, 1);
+
+        clickPanel(3, 1);
+        assertPanelEmpty(3, 1);
+
+        clickPanel(4, 1);
+        assertPanelEmpty(4, 1);
+    }
 
 
-    // -----------------------
-    // Helper Methods
-    // -----------------------
+    @Test
+    void testTopLeftCornerBorderChanger(){
+        clickPanel(2, 2);
+        assertPanelNotEmpty(2, 2);
+
+        clickPanel(0, 0);
+        assertPanelNotEmpty(0, 0);
+
+        //I'm able to use for loops here because I'm checking that the boxes are empty, so
+        //it won't interfere with the win mechanism
+        for(int i = 3; i < 5; i++){
+            for(int j = 0; j < 3; j++){
+                clickPanel(i, j);
+                assertPanelEmpty(i, j);
+            }
+        }
+        for(int i = 0; i < 5; i++){
+            for(int j = 3; j < 5; j++){
+                clickPanel(i, j);
+                assertPanelEmpty(i, j);
+            }
+        }
+    }
+
+    @Test
+    void testTopRightCornerBorderChanger(){
+        clickPanel(2, 2);
+        assertPanelNotEmpty(2, 2);
+
+        clickPanel(4, 0);
+        assertPanelNotEmpty(4, 0);
+
+        for(int i = 0; i < 2; i++){
+            for(int j = 0; j < 3; j++){
+                clickPanel(i, j);
+                assertPanelEmpty(i, j);
+            }
+        }
+        for(int i = 0; i < 5; i++){
+            for(int j = 3; j < 5; j++){
+                clickPanel(i, j);
+                assertPanelEmpty(i, j);
+            }
+        }
+    }
+
+    @Test
+    void testBottomLeftCornerBorderChanger(){
+        clickPanel(2, 2);
+        assertPanelNotEmpty(2, 2);
+
+        clickPanel(0, 4);
+        assertPanelNotEmpty(0, 4);
+
+        for(int i = 3; i < 5; i++){
+            for(int j = 2; j < 5; j++){
+                clickPanel(i, j);
+                assertPanelEmpty(i, j);
+            }
+        }
+        for(int i = 0; i < 5; i++){
+            for(int j = 0; j < 2; j++){
+                clickPanel(i, j);
+                assertPanelEmpty(i, j);
+            }
+        }
+    }
+
+    @Test
+    void testBottomRightCornerBorderChanger(){
+        clickPanel(2, 2);
+        assertPanelNotEmpty(2, 2);
+
+        clickPanel(4, 4);
+        assertPanelNotEmpty(4, 4);
+
+        for(int i = 0; i < 2; i++){
+            for(int j = 2; j < 5; j++){
+                clickPanel(i, j);
+                assertPanelEmpty(i, j);
+            }
+        }
+        for(int i = 0; i < 5; i++){
+            for(int j = 0; j < 2; j++){
+                clickPanel(i, j);
+                assertPanelEmpty(i, j);
+            }
+        }
+    }
+
+
+
+
 
     private void clickPanel(int XCoord, int YCoord) {
         String panelName = "panel_" + XCoord + "_" + YCoord   ;
