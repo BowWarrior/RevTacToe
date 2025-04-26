@@ -6,7 +6,6 @@ import java.awt.event.MouseEvent;
 
 public class GameLogic{
     public boolean firstPlayersTurn = true;
-    private int boardWidth, boardHeight; //these are the current height and width of the board
 
     //these locations are relative to the 5x5 array
     private int boardWidthLoc1 = 0; //describes where leftmost of board is
@@ -14,6 +13,9 @@ public class GameLogic{
     private int boardWidthLoc2 = 4; //describes where rightmost part of board is
     private int boardHeightLoc2 = 4; //describes where bottom of board is
 
+    //these are the current height and width of the board
+    private int innerBoxWidth = 0;
+    private int innerBoxHeight = 0;
 
     GameLogic(JPanel[][] board, JFrame frame){
         for(int i = 0; i < 5; i++){
@@ -39,14 +41,11 @@ public class GameLogic{
                         //board[XCoord][YCoord].removeAll();
                         //board[XCoord][YCoord].getComponent(board[XCoord][YCoord])
                         JPanel tempPanel = board[XCoord][YCoord];
-                        if(/*hi*/board[XCoord][YCoord].getComponentCount() == 0 && checkDimensions(boardWidthLoc1, boardWidthLoc2, boardHeightLoc1, boardHeightLoc2, XCoord, YCoord)) {
+                        if(board[XCoord][YCoord].getComponentCount() == 0 && checkDimensions(boardWidthLoc1, boardWidthLoc2, boardHeightLoc1, boardHeightLoc2, innerBoxWidth, innerBoxHeight, XCoord, YCoord)) {
                             placeMove(board[XCoord][YCoord], fontSize, XCoord, YCoord, board);
                         }
-
                     }
                 });
-
-
             }
         }
     }
@@ -71,20 +70,18 @@ public class GameLogic{
         //changeDimensions(panels,  boardWidth, boardHeight);
 
         //these 2 if statements make sure that the playable board won't
-        if(boardWidthLoc1 != 2 && boardWidthLoc2 != 2) {
+        if(innerBoxWidth != 3) {
             updateWidth(XCoord, board);
         }
-        if(boardHeightLoc1 != 2 && boardHeightLoc2 != 2) {
+        if(innerBoxHeight !=3) {
             updateHeight(YCoord, board);
         }
-
 
         if(firstPlayersTurn){
             placeX(tempPanel, fontSize);
         } else {
             placeO(tempPanel, fontSize);
         }
-
 
         switchTurn();
     }
@@ -127,66 +124,68 @@ public class GameLogic{
     }
 
     private void updateWidth(int XCoord, JPanel[][] board) {
-        int firstMoveWidth = 2;
-
-        //check if we should shrink the right boundar   y (and clips what we check as boundaries get smaller to reduce computation)
-        boolean rightIsEmpty = true;
-        for (int i = boardWidthLoc2; i > XCoord; i--) {
-            if (board[i][XCoord].getComponentCount() != 0) {
-                rightIsEmpty = false;
-                break;
+        //this line says if the inner box's width is 3,
+        // then we should not be able to change the Width anymore for anything
+        int subtractedWidthValue = boardWidthLoc2 - boardWidthLoc1;
+        System.out.println("subtractedWidthValue " + subtractedWidthValue);
+        if(XCoord == 4 || XCoord == 0 || subtractedWidthValue == 2){
+            innerBoxWidth = 3;
+            if(XCoord == 4){
+                boardWidthLoc1 = 2;
             }
-        }
-        if (rightIsEmpty) {
-            boardWidthLoc2--;
-            System.out.println("New boardWidthLoc2: " + boardWidthLoc2);
+            if(XCoord == 0){
+                boardWidthLoc2 = 2;
+            }
+            System.out.println("the Width is immutable!");
         }
 
-        //check if we should shrink the left boundary (and clips what we check as boundaries get smaller to reduce computation)
-        boolean leftIsEmpty = true;
-        for (int i = boardWidthLoc1; i < XCoord; i++) {
-            if (board[i][XCoord].getComponentCount() > 0) {
-                leftIsEmpty = false;
-                break;
-            }
-        }
-        if (leftIsEmpty) {
-            boardWidthLoc1++;
-            System.out.println("New boardWidthLoc1: " + boardWidthLoc1);
+        //makes it so when you place a move not on the edges that it will keep track
+        //of when to set subtractedWidthValue to 3. Also, this if statement can only be called once
+        //because the boardWidthLoc will never be equal to 4 or 0 after it's run once
+        if(XCoord == 1 && boardWidthLoc2 == 4) {
+            boardWidthLoc2 = boardWidthLoc2 - 1;
+        } else if (XCoord == 3 && boardWidthLoc1 == 0) {
+            boardWidthLoc1 = boardWidthLoc1 + 1;
+            System.out.println(boardWidthLoc1);
         }
     }
 
 
     private void updateHeight(int YCoord, JPanel[][] board){
-        int firstMoveheight = 2;
-        if(YCoord < firstMoveheight){
-            boardHeightLoc2 = boardHeightLoc2 - (firstMoveheight - YCoord);
-            //System.out.println(boardHeightLoc2);
-        } else if(YCoord > firstMoveheight){
-            boardHeightLoc1 = boardHeightLoc1 + (YCoord - firstMoveheight);
-            //System.out.println(boardHeightLoc1);
+        //this block says if the inner box's width is 3,
+        // then we should not be able to change the Height anymore for anything
+        int subtractedHeightValue = boardHeightLoc2 - boardHeightLoc1;
+        System.out.println("subtractedHeightValue " + subtractedHeightValue);
+        if(YCoord == 4 || YCoord == 0 || subtractedHeightValue == 2){
+            innerBoxHeight = 3;
+            if(YCoord == 4){
+                boardHeightLoc1 = 2;
+            }
+            if(YCoord == 0){
+                boardHeightLoc2 = 2;
+            }
+            System.out.println("the Height is immutable!");
         }
-        //System.out.println("YCoord: " + YCoord);
-        //System.out.println("boardHeightLoc1: " + boardHeightLoc1 + " " + "boardHeightLoc2: " + boardHeightLoc2);
-        //System.out.println("difference between width1 and width2 = " + (boardWidthLoc2 - boardWidthLoc1));
-        //System.out.println("difference between height1 and height2 = " + (boardHeightLoc2 - boardHeightLoc1));
-        // this.boardHeight = YCoord;
+
+        //makes it so when you place a move not on the edges that it will keep track
+        //of when to set subtractedHeightValue to 3. Also, this if statement can only be called once
+        //because the boardHeightLoc will never be equal to 4 or 0 after it's run once
+        if(YCoord == 1 && boardHeightLoc2 == 4) {
+            boardHeightLoc2 = boardHeightLoc2 - 1;
+        } else if (YCoord == 3 && boardHeightLoc1 == 0) {
+            boardHeightLoc1 = boardHeightLoc1 + 1;
+            System.out.println(boardHeightLoc1);
+        }
     }
 
-    /*
-    void changeDimensions(JPanel panels, int boardWidth, int boardHeight){
-        updateWidth(boardWidth);
-        updateHeight(boardHeight);
-    }
-    */
+
 
     //returns true if the dimensions of our move is valid ONLY by checking dimensions
-    private static boolean checkDimensions(int boardWidthLoc1, int boardWidthLoc2, int boardHeightLoc1, int boardHeightLoc2, int XCoord, int YCoord){
+    private static boolean checkDimensions(int boardWidthLoc1, int boardWidthLoc2, int boardHeightLoc1, int boardHeightLoc2, int innerBoxWidth, int innerBoxHeight, int XCoord, int YCoord){
+        //this makes sure our move is between the board widths and heights
+
         //System.out.println("XCoord: " + XCoord + " " + "YCoord: " + YCoord + " " + "boardWidthLoc1: " + boardWidthLoc1 + " " + "boardWidthLoc2: " + boardWidthLoc2 + " " + "boardHeightLoc1: " + boardHeightLoc1 + " " + "boardHeightLoc1: " + boardHeightLoc2);
         return XCoord >= boardWidthLoc1 && XCoord <= boardWidthLoc2 && YCoord >= boardHeightLoc1 && YCoord <= boardHeightLoc2;
     }
-
-
-
 
 }
