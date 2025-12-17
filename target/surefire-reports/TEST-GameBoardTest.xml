@@ -1,69 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="GameBoardTest" time="68.944" tests="23" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="GameBoardTest" time="71.077" tests="23" errors="0" skipped="0" failures="0">
   <properties>
-    <property name="java.specification.version" value="23"/>
+    <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="sun.awt.enableExtraMouseButtons" value="true"/>
     <property name="java.class.path" value="C:\Users\User\OneDrive\Desktop\RevTacToe\target\test-classes;C:\Users\User\OneDrive\Desktop\RevTacToe\target\classes;C:\Users\User\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\User\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\User\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\User\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\User\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\User\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;C:\Users\User\.m2\repository\org\assertj\assertj-swing-junit\3.9.2\assertj-swing-junit-3.9.2.jar;C:\Users\User\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\User\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\User\.m2\repository\org\assertj\assertj-swing\3.9.2\assertj-swing-3.9.2.jar;C:\Users\User\.m2\repository\org\assertj\assertj-core\3.11.1\assertj-core-3.11.1.jar;C:\Users\User\.m2\repository\org\easytesting\fest-util\1.2.5\fest-util-1.2.5.jar;C:\Users\User\.m2\repository\org\easytesting\fest-reflect\1.4.1\fest-reflect-1.4.1.jar;"/>
-    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
-    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
     <property name="user.timezone" value="Europe/Berlin"/>
     <property name="os.name" value="Windows 11"/>
-    <property name="java.vm.specification.version" value="23"/>
+    <property name="java.vm.specification.version" value="17"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
-    <property name="sun.boot.library.path" value="C:\Users\User\.jdks\openjdk-23.0.1\bin"/>
-    <property name="sun.java.command" value="C:\Users\User\AppData\Local\Temp\surefire16596367354367836380\surefirebooter-20250514202804700_3.jar C:\Users\User\AppData\Local\Temp\surefire16596367354367836380 2025-05-14T20-28-04_562-jvmRun1 surefire-20250514202804700_1tmp surefire_0-20250514202804700_2tmp"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-17.0.15.6-hotspot\bin"/>
+    <property name="sun.java.command" value="C:\Users\User\AppData\Local\Temp\surefire9175331070786968940\surefirebooter-20250727173612974_3.jar C:\Users\User\AppData\Local\Temp\surefire9175331070786968940 2025-07-27T17-36-12_826-jvmRun1 surefire-20250727173612974_1tmp surefire_0-20250727173612974_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\User\OneDrive\Desktop\RevTacToe\target\test-classes;C:\Users\User\OneDrive\Desktop\RevTacToe\target\classes;C:\Users\User\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\User\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\User\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\User\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\User\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\User\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;C:\Users\User\.m2\repository\org\assertj\assertj-swing-junit\3.9.2\assertj-swing-junit-3.9.2.jar;C:\Users\User\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\User\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\User\.m2\repository\org\assertj\assertj-swing\3.9.2\assertj-swing-3.9.2.jar;C:\Users\User\.m2\repository\org\assertj\assertj-core\3.11.1\assertj-core-3.11.1.jar;C:\Users\User\.m2\repository\org\easytesting\fest-util\1.2.5\fest-util-1.2.5.jar;C:\Users\User\.m2\repository\org\easytesting\fest-reflect\1.4.1\fest-reflect-1.4.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\User"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.version.date" value="2024-10-15"/>
-    <property name="java.home" value="C:\Users\User\.jdks\openjdk-23.0.1"/>
+    <property name="java.version.date" value="2025-04-15"/>
+    <property name="java.home" value="C:\Program Files\Eclipse Adoptium\jdk-17.0.15.6-hotspot"/>
     <property name="file.separator" value="\"/>
     <property name="basedir" value="C:\Users\User\OneDrive\Desktop\RevTacToe"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\User\AppData\Local\Temp\surefire16596367354367836380\surefirebooter-20250514202804700_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\User\AppData\Local\Temp\surefire9175331070786968940\surefirebooter-20250727173612974_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="java.runtime.version" value="23.0.1+11-39"/>
+    <property name="java.runtime.version" value="17.0.15+6"/>
     <property name="user.name" value="User"/>
-    <property name="stdout.encoding" value="Cp1252"/>
     <property name="path.separator" value=";"/>
     <property name="os.version" value="10.0"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
-    <property name="file.encoding" value="UTF-8"/>
+    <property name="file.encoding" value="Cp1252"/>
     <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-17.0.15+6"/>
     <property name="localRepository" value="C:\Users\User\.m2\repository"/>
-    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
     <property name="java.io.tmpdir" value="C:\Users\User\AppData\Local\Temp\"/>
-    <property name="idea.version" value="2024.2.4"/>
-    <property name="java.version" value="23.0.1"/>
+    <property name="java.version" value="17.0.15"/>
     <property name="user.dir" value="C:\Users\User\OneDrive\Desktop\RevTacToe"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="native.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Users\User\.jdks\openjdk-23.0.1\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Users\User\mingw64\bin;C:\Users\User\AppData\Local\Programs\Git\cmd;C:\Program Files\nodejs\;C:\Users\User\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\User\AppData\Local\Programs\Python\Python313\;C:\Users\User\AppData\Local\Programs\Eclipse Adoptium\jdk-17.0.4.101-hotspot\bin;C:\Users\User\AppData\Local\Microsoft\WindowsApps;;C:\Users\User\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\User\AppData\Roaming\npm;C:\Users\User\AppData\Local\Programs\cursor\resources\app\bin;."/>
+    <property name="java.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-17.0.15.6-hotspot\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Eclipse Adoptium\jdk-17.0.15.6-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Users\User\mingw64\bin;C:\Users\User\AppData\Local\Programs\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\Vim\vim91\;C:\ProgramData\chocolatey\bin;C:\ProgramData\chocolatey\lib\maven\apache-maven-3.9.10\bin;C:\Users\User\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\User\AppData\Local\Programs\Python\Python313\;C:\Users\User\AppData\Local\Programs\Eclipse Adoptium\jdk-17.0.4.101-hotspot\bin;C:\Users\User\AppData\Local\Microsoft\WindowsApps;;C:\Users\User\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\User\AppData\Roaming\npm;C:\Users\User\AppData\Local\Programs\cursor\resources\app\bin;."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
-    <property name="stderr.encoding" value="Cp1252"/>
-    <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="java.vm.version" value="23.0.1+11-39"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="17.0.15+6"/>
+    <property name="java.specification.maintenance.version" value="1"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="java.class.version" value="67.0"/>
+    <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testOuterHeightChangerDown" classname="GameBoardTest" time="4.084">
+  <testcase name="testOuterHeightChangerDown" classname="GameBoardTest" time="4.319">
     <system-out><![CDATA[Clicking panel: panel_2_2
 Clicking panel: panel_2_4
-the Height is immutable!
 Clicking panel: panel_0_0
 Clicking panel: panel_1_0
 Clicking panel: panel_2_0
@@ -76,7 +74,7 @@ Clicking panel: panel_3_1
 Clicking panel: panel_4_1
 ]]></system-out>
   </testcase>
-  <testcase name="testInnerWidthChangerLeft" classname="GameBoardTest" time="2.453">
+  <testcase name="testInnerWidthChangerLeft" classname="GameBoardTest" time="2.557">
     <system-out><![CDATA[Clicking panel: panel_2_2
 Clicking panel: panel_1_2
 Clicking panel: panel_4_0
@@ -86,7 +84,7 @@ Clicking panel: panel_4_3
 Clicking panel: panel_4_4
 ]]></system-out>
   </testcase>
-  <testcase name="testInnerHeightChangerDown" classname="GameBoardTest" time="2.498">
+  <testcase name="testInnerHeightChangerDown" classname="GameBoardTest" time="2.535">
     <system-out><![CDATA[Clicking panel: panel_2_2
 Clicking panel: panel_2_3
 Clicking panel: panel_0_0
@@ -96,11 +94,9 @@ Clicking panel: panel_3_0
 Clicking panel: panel_4_0
 ]]></system-out>
   </testcase>
-  <testcase name="testTopLeftBox" classname="GameBoardTest" time="2.988">
+  <testcase name="testTopLeftBox" classname="GameBoardTest" time="3.027">
     <system-out><![CDATA[Clicking panel: panel_2_2
 Clicking panel: panel_0_0
-the Width is immutable!
-the Height is immutable!
 Clicking panel: panel_0_2
 Clicking panel: panel_1_2
 Clicking panel: panel_0_1
@@ -110,30 +106,27 @@ Clicking panel: panel_2_1
 Clicking panel: panel_1_0
 ]]></system-out>
   </testcase>
-  <testcase name="testMiddleLeftBox" classname="GameBoardTest" time="2.903">
+  <testcase name="testMiddleLeftBox" classname="GameBoardTest" time="2.924">
     <system-out><![CDATA[Clicking panel: panel_2_2
 Clicking panel: panel_2_3
 Clicking panel: panel_1_3
 Clicking panel: panel_0_3
-the Width is immutable!
 Clicking panel: panel_2_1
 Clicking panel: panel_1_2
-the Height is immutable!
 Clicking panel: panel_0_2
 Clicking panel: panel_1_1
 Clicking panel: panel_0_1
 ]]></system-out>
-    <system-err><![CDATA[May 14, 2025 8:28:19 PM org.assertj.swing.monitor.ProtectingTimerTask handleException
+    <system-err><![CDATA[Jul 27, 2025 5:36:32 PM org.assertj.swing.monitor.ProtectingTimerTask handleException
 WARNING: Exception thrown by a TimerTask
-java.lang.reflect.InaccessibleObjectException: Unable to make field int java.util.TimerTask.state accessible: module java.base does not "opens java.util" to unnamed module @569cfc36
-	at java.base/java.lang.reflect.AccessibleObject.throwInaccessibleObjectException(AccessibleObject.java:388)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:364)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:312)
-	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:183)
-	at java.base/java.lang.reflect.Field.setAccessible(Field.java:177)
+java.lang.reflect.InaccessibleObjectException: Unable to make field int java.util.TimerTask.state accessible: module java.base does not "opens java.util" to unnamed module @76b0bfab
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:178)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:172)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:70)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:60)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.setAccessible(Accessibles.java:57)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.makeAccessible(Accessibles.java:46)
 	at org.assertj.swing.dependency.fest_reflect.field.Invoker.verifyCorrectType(Invoker.java:98)
@@ -142,20 +135,19 @@ java.lang.reflect.InaccessibleObjectException: Unable to make field int java.uti
 	at org.assertj.swing.dependency.fest_reflect.field.FieldType.in(FieldType.java:74)
 	at org.assertj.swing.monitor.ProtectingTimerTask.isCanceled(ProtectingTimerTask.java:54)
 	at org.assertj.swing.monitor.ProtectingTimerTask.run(ProtectingTimerTask.java:41)
-	at java.base/java.util.TimerThread.mainLoop(Timer.java:572)
-	at java.base/java.util.TimerThread.run(Timer.java:522)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
 
 ]]></system-err>
   </testcase>
-  <testcase name="testPlayerTurnSwitchAfterValidMove" classname="GameBoardTest" time="1.022">
+  <testcase name="testPlayerTurnSwitchAfterValidMove" classname="GameBoardTest" time="1.032">
     <system-out><![CDATA[Clicking panel: panel_2_2
 Clicking panel: panel_2_1
 ]]></system-out>
   </testcase>
-  <testcase name="testOuterHeightChangerUp" classname="GameBoardTest" time="3.387">
+  <testcase name="testOuterHeightChangerUp" classname="GameBoardTest" time="3.43">
     <system-out><![CDATA[Clicking panel: panel_2_2
 Clicking panel: panel_2_0
-the Height is immutable!
 Clicking panel: panel_0_3
 Clicking panel: panel_1_3
 Clicking panel: panel_2_3
@@ -167,17 +159,16 @@ Clicking panel: panel_2_4
 Clicking panel: panel_3_4
 Clicking panel: panel_4_4
 ]]></system-out>
-    <system-err><![CDATA[May 14, 2025 8:28:22 PM org.assertj.swing.monitor.ProtectingTimerTask handleException
+    <system-err><![CDATA[Jul 27, 2025 5:36:35 PM org.assertj.swing.monitor.ProtectingTimerTask handleException
 WARNING: Exception thrown by a TimerTask
-java.lang.reflect.InaccessibleObjectException: Unable to make field int java.util.TimerTask.state accessible: module java.base does not "opens java.util" to unnamed module @569cfc36
-	at java.base/java.lang.reflect.AccessibleObject.throwInaccessibleObjectException(AccessibleObject.java:388)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:364)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:312)
-	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:183)
-	at java.base/java.lang.reflect.Field.setAccessible(Field.java:177)
+java.lang.reflect.InaccessibleObjectException: Unable to make field int java.util.TimerTask.state accessible: module java.base does not "opens java.util" to unnamed module @76b0bfab
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:178)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:172)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:70)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:60)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.setAccessible(Accessibles.java:57)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.makeAccessible(Accessibles.java:46)
 	at org.assertj.swing.dependency.fest_reflect.field.Invoker.verifyCorrectType(Invoker.java:98)
@@ -186,20 +177,19 @@ java.lang.reflect.InaccessibleObjectException: Unable to make field int java.uti
 	at org.assertj.swing.dependency.fest_reflect.field.FieldType.in(FieldType.java:74)
 	at org.assertj.swing.monitor.ProtectingTimerTask.isCanceled(ProtectingTimerTask.java:54)
 	at org.assertj.swing.monitor.ProtectingTimerTask.run(ProtectingTimerTask.java:41)
-	at java.base/java.util.TimerThread.mainLoop(Timer.java:572)
-	at java.base/java.util.TimerThread.run(Timer.java:522)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
 
-May 14, 2025 8:28:24 PM org.assertj.swing.monitor.ProtectingTimerTask handleException
+Jul 27, 2025 5:36:37 PM org.assertj.swing.monitor.ProtectingTimerTask handleException
 WARNING: Exception thrown by a TimerTask
-java.lang.reflect.InaccessibleObjectException: Unable to make field int java.util.TimerTask.state accessible: module java.base does not "opens java.util" to unnamed module @569cfc36
-	at java.base/java.lang.reflect.AccessibleObject.throwInaccessibleObjectException(AccessibleObject.java:388)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:364)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:312)
-	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:183)
-	at java.base/java.lang.reflect.Field.setAccessible(Field.java:177)
+java.lang.reflect.InaccessibleObjectException: Unable to make field int java.util.TimerTask.state accessible: module java.base does not "opens java.util" to unnamed module @76b0bfab
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:178)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:172)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:70)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:60)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.setAccessible(Accessibles.java:57)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.makeAccessible(Accessibles.java:46)
 	at org.assertj.swing.dependency.fest_reflect.field.Invoker.verifyCorrectType(Invoker.java:98)
@@ -208,17 +198,15 @@ java.lang.reflect.InaccessibleObjectException: Unable to make field int java.uti
 	at org.assertj.swing.dependency.fest_reflect.field.FieldType.in(FieldType.java:74)
 	at org.assertj.swing.monitor.ProtectingTimerTask.isCanceled(ProtectingTimerTask.java:54)
 	at org.assertj.swing.monitor.ProtectingTimerTask.run(ProtectingTimerTask.java:41)
-	at java.base/java.util.TimerThread.mainLoop(Timer.java:572)
-	at java.base/java.util.TimerThread.run(Timer.java:522)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
 
 ]]></system-err>
   </testcase>
-  <testcase name="testTopRightBox" classname="GameBoardTest" time="2.685">
+  <testcase name="testTopRightBox" classname="GameBoardTest" time="2.71">
     <system-out><![CDATA[Clicking panel: panel_2_2
 Clicking panel: panel_4_2
-the Width is immutable!
 Clicking panel: panel_4_0
-the Height is immutable!
 Clicking panel: panel_3_0
 Clicking panel: panel_4_1
 Clicking panel: panel_3_1
@@ -226,12 +214,32 @@ Clicking panel: panel_2_0
 Clicking panel: panel_2_1
 Clicking panel: panel_3_2
 ]]></system-out>
+    <system-err><![CDATA[Jul 27, 2025 5:36:40 PM org.assertj.swing.monitor.ProtectingTimerTask handleException
+WARNING: Exception thrown by a TimerTask
+java.lang.reflect.InaccessibleObjectException: Unable to make field int java.util.TimerTask.state accessible: module java.base does not "opens java.util" to unnamed module @76b0bfab
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:178)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:172)
+	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:70)
+	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:60)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
+	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.setAccessible(Accessibles.java:57)
+	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.makeAccessible(Accessibles.java:46)
+	at org.assertj.swing.dependency.fest_reflect.field.Invoker.verifyCorrectType(Invoker.java:98)
+	at org.assertj.swing.dependency.fest_reflect.field.Invoker.createInvoker(Invoker.java:74)
+	at org.assertj.swing.dependency.fest_reflect.field.Invoker.newInvoker(Invoker.java:68)
+	at org.assertj.swing.dependency.fest_reflect.field.FieldType.in(FieldType.java:74)
+	at org.assertj.swing.monitor.ProtectingTimerTask.isCanceled(ProtectingTimerTask.java:54)
+	at org.assertj.swing.monitor.ProtectingTimerTask.run(ProtectingTimerTask.java:41)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
+
+]]></system-err>
   </testcase>
-  <testcase name="testTopLeftCornerBorderChanger" classname="GameBoardTest" time="4.82">
+  <testcase name="testTopLeftCornerBorderChanger" classname="GameBoardTest" time="5.11">
     <system-out><![CDATA[Clicking panel: panel_2_2
 Clicking panel: panel_0_0
-the Width is immutable!
-the Height is immutable!
 Clicking panel: panel_3_0
 Clicking panel: panel_3_1
 Clicking panel: panel_3_2
@@ -249,17 +257,16 @@ Clicking panel: panel_3_4
 Clicking panel: panel_4_3
 Clicking panel: panel_4_4
 ]]></system-out>
-    <system-err><![CDATA[May 14, 2025 8:28:27 PM org.assertj.swing.monitor.ProtectingTimerTask handleException
+    <system-err><![CDATA[Jul 27, 2025 5:36:43 PM org.assertj.swing.monitor.ProtectingTimerTask handleException
 WARNING: Exception thrown by a TimerTask
-java.lang.reflect.InaccessibleObjectException: Unable to make field int java.util.TimerTask.state accessible: module java.base does not "opens java.util" to unnamed module @569cfc36
-	at java.base/java.lang.reflect.AccessibleObject.throwInaccessibleObjectException(AccessibleObject.java:388)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:364)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:312)
-	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:183)
-	at java.base/java.lang.reflect.Field.setAccessible(Field.java:177)
+java.lang.reflect.InaccessibleObjectException: Unable to make field int java.util.TimerTask.state accessible: module java.base does not "opens java.util" to unnamed module @76b0bfab
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:178)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:172)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:70)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:60)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.setAccessible(Accessibles.java:57)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.makeAccessible(Accessibles.java:46)
 	at org.assertj.swing.dependency.fest_reflect.field.Invoker.verifyCorrectType(Invoker.java:98)
@@ -268,20 +275,19 @@ java.lang.reflect.InaccessibleObjectException: Unable to make field int java.uti
 	at org.assertj.swing.dependency.fest_reflect.field.FieldType.in(FieldType.java:74)
 	at org.assertj.swing.monitor.ProtectingTimerTask.isCanceled(ProtectingTimerTask.java:54)
 	at org.assertj.swing.monitor.ProtectingTimerTask.run(ProtectingTimerTask.java:41)
-	at java.base/java.util.TimerThread.mainLoop(Timer.java:572)
-	at java.base/java.util.TimerThread.run(Timer.java:522)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
 
-May 14, 2025 8:28:30 PM org.assertj.swing.monitor.ProtectingTimerTask handleException
+Jul 27, 2025 5:36:44 PM org.assertj.swing.monitor.ProtectingTimerTask handleException
 WARNING: Exception thrown by a TimerTask
-java.lang.reflect.InaccessibleObjectException: Unable to make field int java.util.TimerTask.state accessible: module java.base does not "opens java.util" to unnamed module @569cfc36
-	at java.base/java.lang.reflect.AccessibleObject.throwInaccessibleObjectException(AccessibleObject.java:388)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:364)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:312)
-	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:183)
-	at java.base/java.lang.reflect.Field.setAccessible(Field.java:177)
+java.lang.reflect.InaccessibleObjectException: Unable to make field int java.util.TimerTask.state accessible: module java.base does not "opens java.util" to unnamed module @76b0bfab
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:178)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:172)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:70)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:60)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.setAccessible(Accessibles.java:57)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.makeAccessible(Accessibles.java:46)
 	at org.assertj.swing.dependency.fest_reflect.field.Invoker.verifyCorrectType(Invoker.java:98)
@@ -290,38 +296,14 @@ java.lang.reflect.InaccessibleObjectException: Unable to make field int java.uti
 	at org.assertj.swing.dependency.fest_reflect.field.FieldType.in(FieldType.java:74)
 	at org.assertj.swing.monitor.ProtectingTimerTask.isCanceled(ProtectingTimerTask.java:54)
 	at org.assertj.swing.monitor.ProtectingTimerTask.run(ProtectingTimerTask.java:41)
-	at java.base/java.util.TimerThread.mainLoop(Timer.java:572)
-	at java.base/java.util.TimerThread.run(Timer.java:522)
-
-May 14, 2025 8:28:31 PM org.assertj.swing.monitor.ProtectingTimerTask handleException
-WARNING: Exception thrown by a TimerTask
-java.lang.reflect.InaccessibleObjectException: Unable to make field int java.util.TimerTask.state accessible: module java.base does not "opens java.util" to unnamed module @569cfc36
-	at java.base/java.lang.reflect.AccessibleObject.throwInaccessibleObjectException(AccessibleObject.java:388)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:364)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:312)
-	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:183)
-	at java.base/java.lang.reflect.Field.setAccessible(Field.java:177)
-	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:70)
-	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:60)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319)
-	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.setAccessible(Accessibles.java:57)
-	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.makeAccessible(Accessibles.java:46)
-	at org.assertj.swing.dependency.fest_reflect.field.Invoker.verifyCorrectType(Invoker.java:98)
-	at org.assertj.swing.dependency.fest_reflect.field.Invoker.createInvoker(Invoker.java:74)
-	at org.assertj.swing.dependency.fest_reflect.field.Invoker.newInvoker(Invoker.java:68)
-	at org.assertj.swing.dependency.fest_reflect.field.FieldType.in(FieldType.java:74)
-	at org.assertj.swing.monitor.ProtectingTimerTask.isCanceled(ProtectingTimerTask.java:54)
-	at org.assertj.swing.monitor.ProtectingTimerTask.run(ProtectingTimerTask.java:41)
-	at java.base/java.util.TimerThread.mainLoop(Timer.java:572)
-	at java.base/java.util.TimerThread.run(Timer.java:522)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
 
 ]]></system-err>
   </testcase>
-  <testcase name="testBottomLeftCornerBorderChanger" classname="GameBoardTest" time="4.82">
+  <testcase name="testBottomLeftCornerBorderChanger" classname="GameBoardTest" time="4.926">
     <system-out><![CDATA[Clicking panel: panel_2_2
 Clicking panel: panel_0_4
-the Width is immutable!
-the Height is immutable!
 Clicking panel: panel_3_2
 Clicking panel: panel_3_3
 Clicking panel: panel_3_4
@@ -339,17 +321,16 @@ Clicking panel: panel_3_1
 Clicking panel: panel_4_0
 Clicking panel: panel_4_1
 ]]></system-out>
-    <system-err><![CDATA[May 14, 2025 8:28:34 PM org.assertj.swing.monitor.ProtectingTimerTask handleException
+    <system-err><![CDATA[Jul 27, 2025 5:36:47 PM org.assertj.swing.monitor.ProtectingTimerTask handleException
 WARNING: Exception thrown by a TimerTask
-java.lang.reflect.InaccessibleObjectException: Unable to make field int java.util.TimerTask.state accessible: module java.base does not "opens java.util" to unnamed module @569cfc36
-	at java.base/java.lang.reflect.AccessibleObject.throwInaccessibleObjectException(AccessibleObject.java:388)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:364)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:312)
-	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:183)
-	at java.base/java.lang.reflect.Field.setAccessible(Field.java:177)
+java.lang.reflect.InaccessibleObjectException: Unable to make field int java.util.TimerTask.state accessible: module java.base does not "opens java.util" to unnamed module @76b0bfab
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:178)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:172)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:70)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:60)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.setAccessible(Accessibles.java:57)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.makeAccessible(Accessibles.java:46)
 	at org.assertj.swing.dependency.fest_reflect.field.Invoker.verifyCorrectType(Invoker.java:98)
@@ -358,15 +339,14 @@ java.lang.reflect.InaccessibleObjectException: Unable to make field int java.uti
 	at org.assertj.swing.dependency.fest_reflect.field.FieldType.in(FieldType.java:74)
 	at org.assertj.swing.monitor.ProtectingTimerTask.isCanceled(ProtectingTimerTask.java:54)
 	at org.assertj.swing.monitor.ProtectingTimerTask.run(ProtectingTimerTask.java:41)
-	at java.base/java.util.TimerThread.mainLoop(Timer.java:572)
-	at java.base/java.util.TimerThread.run(Timer.java:522)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
 
 ]]></system-err>
   </testcase>
-  <testcase name="testOuterWidthChangerLeft" classname="GameBoardTest" time="3.382">
+  <testcase name="testOuterWidthChangerLeft" classname="GameBoardTest" time="3.492">
     <system-out><![CDATA[Clicking panel: panel_2_2
 Clicking panel: panel_0_2
-the Width is immutable!
 Clicking panel: panel_3_0
 Clicking panel: panel_3_1
 Clicking panel: panel_3_2
@@ -378,17 +358,16 @@ Clicking panel: panel_4_2
 Clicking panel: panel_4_3
 Clicking panel: panel_4_4
 ]]></system-out>
-    <system-err><![CDATA[May 14, 2025 8:28:37 PM org.assertj.swing.monitor.ProtectingTimerTask handleException
+    <system-err><![CDATA[Jul 27, 2025 5:36:50 PM org.assertj.swing.monitor.ProtectingTimerTask handleException
 WARNING: Exception thrown by a TimerTask
-java.lang.reflect.InaccessibleObjectException: Unable to make field int java.util.TimerTask.state accessible: module java.base does not "opens java.util" to unnamed module @569cfc36
-	at java.base/java.lang.reflect.AccessibleObject.throwInaccessibleObjectException(AccessibleObject.java:388)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:364)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:312)
-	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:183)
-	at java.base/java.lang.reflect.Field.setAccessible(Field.java:177)
+java.lang.reflect.InaccessibleObjectException: Unable to make field int java.util.TimerTask.state accessible: module java.base does not "opens java.util" to unnamed module @76b0bfab
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:178)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:172)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:70)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:60)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.setAccessible(Accessibles.java:57)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.makeAccessible(Accessibles.java:46)
 	at org.assertj.swing.dependency.fest_reflect.field.Invoker.verifyCorrectType(Invoker.java:98)
@@ -397,16 +376,14 @@ java.lang.reflect.InaccessibleObjectException: Unable to make field int java.uti
 	at org.assertj.swing.dependency.fest_reflect.field.FieldType.in(FieldType.java:74)
 	at org.assertj.swing.monitor.ProtectingTimerTask.isCanceled(ProtectingTimerTask.java:54)
 	at org.assertj.swing.monitor.ProtectingTimerTask.run(ProtectingTimerTask.java:41)
-	at java.base/java.util.TimerThread.mainLoop(Timer.java:572)
-	at java.base/java.util.TimerThread.run(Timer.java:522)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
 
 ]]></system-err>
   </testcase>
-  <testcase name="testTopRightCornerBorderChanger" classname="GameBoardTest" time="4.815">
+  <testcase name="testTopRightCornerBorderChanger" classname="GameBoardTest" time="4.856">
     <system-out><![CDATA[Clicking panel: panel_2_2
 Clicking panel: panel_4_0
-the Width is immutable!
-the Height is immutable!
 Clicking panel: panel_0_0
 Clicking panel: panel_0_1
 Clicking panel: panel_0_2
@@ -424,17 +401,16 @@ Clicking panel: panel_3_4
 Clicking panel: panel_4_3
 Clicking panel: panel_4_4
 ]]></system-out>
-    <system-err><![CDATA[May 14, 2025 8:28:42 PM org.assertj.swing.monitor.ProtectingTimerTask handleException
+    <system-err><![CDATA[Jul 27, 2025 5:36:55 PM org.assertj.swing.monitor.ProtectingTimerTask handleException
 WARNING: Exception thrown by a TimerTask
-java.lang.reflect.InaccessibleObjectException: Unable to make field int java.util.TimerTask.state accessible: module java.base does not "opens java.util" to unnamed module @569cfc36
-	at java.base/java.lang.reflect.AccessibleObject.throwInaccessibleObjectException(AccessibleObject.java:388)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:364)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:312)
-	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:183)
-	at java.base/java.lang.reflect.Field.setAccessible(Field.java:177)
+java.lang.reflect.InaccessibleObjectException: Unable to make field int java.util.TimerTask.state accessible: module java.base does not "opens java.util" to unnamed module @76b0bfab
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:178)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:172)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:70)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:60)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.setAccessible(Accessibles.java:57)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.makeAccessible(Accessibles.java:46)
 	at org.assertj.swing.dependency.fest_reflect.field.Invoker.verifyCorrectType(Invoker.java:98)
@@ -443,12 +419,12 @@ java.lang.reflect.InaccessibleObjectException: Unable to make field int java.uti
 	at org.assertj.swing.dependency.fest_reflect.field.FieldType.in(FieldType.java:74)
 	at org.assertj.swing.monitor.ProtectingTimerTask.isCanceled(ProtectingTimerTask.java:54)
 	at org.assertj.swing.monitor.ProtectingTimerTask.run(ProtectingTimerTask.java:41)
-	at java.base/java.util.TimerThread.mainLoop(Timer.java:572)
-	at java.base/java.util.TimerThread.run(Timer.java:522)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
 
 ]]></system-err>
   </testcase>
-  <testcase name="testInnerHeightChangerUp" classname="GameBoardTest" time="2.202">
+  <testcase name="testInnerHeightChangerUp" classname="GameBoardTest" time="2.301">
     <system-out><![CDATA[Clicking panel: panel_2_2
 Clicking panel: panel_2_1
 Clicking panel: panel_0_4
@@ -457,17 +433,16 @@ Clicking panel: panel_2_4
 Clicking panel: panel_3_4
 Clicking panel: panel_4_4
 ]]></system-out>
-    <system-err><![CDATA[May 14, 2025 8:28:47 PM org.assertj.swing.monitor.ProtectingTimerTask handleException
+    <system-err><![CDATA[Jul 27, 2025 5:37:00 PM org.assertj.swing.monitor.ProtectingTimerTask handleException
 WARNING: Exception thrown by a TimerTask
-java.lang.reflect.InaccessibleObjectException: Unable to make field int java.util.TimerTask.state accessible: module java.base does not "opens java.util" to unnamed module @569cfc36
-	at java.base/java.lang.reflect.AccessibleObject.throwInaccessibleObjectException(AccessibleObject.java:388)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:364)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:312)
-	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:183)
-	at java.base/java.lang.reflect.Field.setAccessible(Field.java:177)
+java.lang.reflect.InaccessibleObjectException: Unable to make field int java.util.TimerTask.state accessible: module java.base does not "opens java.util" to unnamed module @76b0bfab
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:178)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:172)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:70)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:60)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.setAccessible(Accessibles.java:57)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.makeAccessible(Accessibles.java:46)
 	at org.assertj.swing.dependency.fest_reflect.field.Invoker.verifyCorrectType(Invoker.java:98)
@@ -476,31 +451,27 @@ java.lang.reflect.InaccessibleObjectException: Unable to make field int java.uti
 	at org.assertj.swing.dependency.fest_reflect.field.FieldType.in(FieldType.java:74)
 	at org.assertj.swing.monitor.ProtectingTimerTask.isCanceled(ProtectingTimerTask.java:54)
 	at org.assertj.swing.monitor.ProtectingTimerTask.run(ProtectingTimerTask.java:41)
-	at java.base/java.util.TimerThread.mainLoop(Timer.java:572)
-	at java.base/java.util.TimerThread.run(Timer.java:522)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
 
 ]]></system-err>
   </testcase>
-  <testcase name="testMiddleRightBox" classname="GameBoardTest" time="2.677">
+  <testcase name="testMiddleRightBox" classname="GameBoardTest" time="2.712">
     <system-out><![CDATA[Clicking panel: panel_2_2
 Clicking panel: panel_4_3
-the Width is immutable!
 Clicking panel: panel_3_3
 Clicking panel: panel_2_3
 Clicking panel: panel_4_1
 Clicking panel: panel_4_2
-the Height is immutable!
 Clicking panel: panel_3_2
 Clicking panel: panel_3_1
 Clicking panel: panel_2_1
 ]]></system-out>
   </testcase>
-  <testcase name="testBottomLeftBox" classname="GameBoardTest" time="2.686">
+  <testcase name="testBottomLeftBox" classname="GameBoardTest" time="2.718">
     <system-out><![CDATA[Clicking panel: panel_2_2
 Clicking panel: panel_2_4
-the Height is immutable!
 Clicking panel: panel_0_2
-the Width is immutable!
 Clicking panel: panel_1_2
 Clicking panel: panel_2_3
 Clicking panel: panel_1_3
@@ -508,17 +479,16 @@ Clicking panel: panel_0_4
 Clicking panel: panel_0_3
 Clicking panel: panel_1_4
 ]]></system-out>
-    <system-err><![CDATA[May 14, 2025 8:28:50 PM org.assertj.swing.monitor.ProtectingTimerTask handleException
+    <system-err><![CDATA[Jul 27, 2025 5:37:04 PM org.assertj.swing.monitor.ProtectingTimerTask handleException
 WARNING: Exception thrown by a TimerTask
-java.lang.reflect.InaccessibleObjectException: Unable to make field int java.util.TimerTask.state accessible: module java.base does not "opens java.util" to unnamed module @569cfc36
-	at java.base/java.lang.reflect.AccessibleObject.throwInaccessibleObjectException(AccessibleObject.java:388)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:364)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:312)
-	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:183)
-	at java.base/java.lang.reflect.Field.setAccessible(Field.java:177)
+java.lang.reflect.InaccessibleObjectException: Unable to make field int java.util.TimerTask.state accessible: module java.base does not "opens java.util" to unnamed module @76b0bfab
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:178)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:172)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:70)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:60)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.setAccessible(Accessibles.java:57)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.makeAccessible(Accessibles.java:46)
 	at org.assertj.swing.dependency.fest_reflect.field.Invoker.verifyCorrectType(Invoker.java:98)
@@ -527,35 +497,32 @@ java.lang.reflect.InaccessibleObjectException: Unable to make field int java.uti
 	at org.assertj.swing.dependency.fest_reflect.field.FieldType.in(FieldType.java:74)
 	at org.assertj.swing.monitor.ProtectingTimerTask.isCanceled(ProtectingTimerTask.java:54)
 	at org.assertj.swing.monitor.ProtectingTimerTask.run(ProtectingTimerTask.java:41)
-	at java.base/java.util.TimerThread.mainLoop(Timer.java:572)
-	at java.base/java.util.TimerThread.run(Timer.java:522)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
 
 ]]></system-err>
   </testcase>
-  <testcase name="testMiddleTopBox" classname="GameBoardTest" time="2.698">
+  <testcase name="testMiddleTopBox" classname="GameBoardTest" time="2.711">
     <system-out><![CDATA[Clicking panel: panel_2_2
 Clicking panel: panel_1_0
-the Height is immutable!
 Clicking panel: panel_1_2
 Clicking panel: panel_3_2
 Clicking panel: panel_1_1
-the Width is immutable!
 Clicking panel: panel_2_1
 Clicking panel: panel_3_0
 Clicking panel: panel_3_1
 Clicking panel: panel_2_0
 ]]></system-out>
-    <system-err><![CDATA[May 14, 2025 8:28:55 PM org.assertj.swing.monitor.ProtectingTimerTask handleException
+    <system-err><![CDATA[Jul 27, 2025 5:37:09 PM org.assertj.swing.monitor.ProtectingTimerTask handleException
 WARNING: Exception thrown by a TimerTask
-java.lang.reflect.InaccessibleObjectException: Unable to make field int java.util.TimerTask.state accessible: module java.base does not "opens java.util" to unnamed module @569cfc36
-	at java.base/java.lang.reflect.AccessibleObject.throwInaccessibleObjectException(AccessibleObject.java:388)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:364)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:312)
-	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:183)
-	at java.base/java.lang.reflect.Field.setAccessible(Field.java:177)
+java.lang.reflect.InaccessibleObjectException: Unable to make field int java.util.TimerTask.state accessible: module java.base does not "opens java.util" to unnamed module @76b0bfab
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:178)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:172)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:70)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:60)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.setAccessible(Accessibles.java:57)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.makeAccessible(Accessibles.java:46)
 	at org.assertj.swing.dependency.fest_reflect.field.Invoker.verifyCorrectType(Invoker.java:98)
@@ -564,15 +531,14 @@ java.lang.reflect.InaccessibleObjectException: Unable to make field int java.uti
 	at org.assertj.swing.dependency.fest_reflect.field.FieldType.in(FieldType.java:74)
 	at org.assertj.swing.monitor.ProtectingTimerTask.isCanceled(ProtectingTimerTask.java:54)
 	at org.assertj.swing.monitor.ProtectingTimerTask.run(ProtectingTimerTask.java:41)
-	at java.base/java.util.TimerThread.mainLoop(Timer.java:572)
-	at java.base/java.util.TimerThread.run(Timer.java:522)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
 
 ]]></system-err>
   </testcase>
-  <testcase name="testOuterWidthChangerRight" classname="GameBoardTest" time="3.39">
+  <testcase name="testOuterWidthChangerRight" classname="GameBoardTest" time="3.78">
     <system-out><![CDATA[Clicking panel: panel_2_2
 Clicking panel: panel_4_2
-the Width is immutable!
 Clicking panel: panel_1_0
 Clicking panel: panel_1_1
 Clicking panel: panel_1_2
@@ -584,17 +550,16 @@ Clicking panel: panel_0_2
 Clicking panel: panel_0_3
 Clicking panel: panel_0_4
 ]]></system-out>
-    <system-err><![CDATA[May 14, 2025 8:28:57 PM org.assertj.swing.monitor.ProtectingTimerTask handleException
+    <system-err><![CDATA[Jul 27, 2025 5:37:11 PM org.assertj.swing.monitor.ProtectingTimerTask handleException
 WARNING: Exception thrown by a TimerTask
-java.lang.reflect.InaccessibleObjectException: Unable to make field int java.util.TimerTask.state accessible: module java.base does not "opens java.util" to unnamed module @569cfc36
-	at java.base/java.lang.reflect.AccessibleObject.throwInaccessibleObjectException(AccessibleObject.java:388)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:364)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:312)
-	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:183)
-	at java.base/java.lang.reflect.Field.setAccessible(Field.java:177)
+java.lang.reflect.InaccessibleObjectException: Unable to make field int java.util.TimerTask.state accessible: module java.base does not "opens java.util" to unnamed module @76b0bfab
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:178)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:172)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:70)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:60)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.setAccessible(Accessibles.java:57)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.makeAccessible(Accessibles.java:46)
 	at org.assertj.swing.dependency.fest_reflect.field.Invoker.verifyCorrectType(Invoker.java:98)
@@ -603,35 +568,32 @@ java.lang.reflect.InaccessibleObjectException: Unable to make field int java.uti
 	at org.assertj.swing.dependency.fest_reflect.field.FieldType.in(FieldType.java:74)
 	at org.assertj.swing.monitor.ProtectingTimerTask.isCanceled(ProtectingTimerTask.java:54)
 	at org.assertj.swing.monitor.ProtectingTimerTask.run(ProtectingTimerTask.java:41)
-	at java.base/java.util.TimerThread.mainLoop(Timer.java:572)
-	at java.base/java.util.TimerThread.run(Timer.java:522)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
 
 ]]></system-err>
   </testcase>
-  <testcase name="testNormalBox" classname="GameBoardTest" time="2.688">
+  <testcase name="testNormalBox" classname="GameBoardTest" time="2.738">
     <system-out><![CDATA[Clicking panel: panel_2_2
 Clicking panel: panel_3_3
 Clicking panel: panel_2_3
 Clicking panel: panel_1_3
 Clicking panel: panel_3_1
-the Width is immutable!
 Clicking panel: panel_3_2
-the Height is immutable!
 Clicking panel: panel_1_2
 Clicking panel: panel_2_1
 Clicking panel: panel_1_1
 ]]></system-out>
-    <system-err><![CDATA[May 14, 2025 8:29:00 PM org.assertj.swing.monitor.ProtectingTimerTask handleException
+    <system-err><![CDATA[Jul 27, 2025 5:37:14 PM org.assertj.swing.monitor.ProtectingTimerTask handleException
 WARNING: Exception thrown by a TimerTask
-java.lang.reflect.InaccessibleObjectException: Unable to make field int java.util.TimerTask.state accessible: module java.base does not "opens java.util" to unnamed module @569cfc36
-	at java.base/java.lang.reflect.AccessibleObject.throwInaccessibleObjectException(AccessibleObject.java:388)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:364)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:312)
-	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:183)
-	at java.base/java.lang.reflect.Field.setAccessible(Field.java:177)
+java.lang.reflect.InaccessibleObjectException: Unable to make field int java.util.TimerTask.state accessible: module java.base does not "opens java.util" to unnamed module @76b0bfab
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:178)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:172)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:70)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:60)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.setAccessible(Accessibles.java:57)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.makeAccessible(Accessibles.java:46)
 	at org.assertj.swing.dependency.fest_reflect.field.Invoker.verifyCorrectType(Invoker.java:98)
@@ -640,35 +602,32 @@ java.lang.reflect.InaccessibleObjectException: Unable to make field int java.uti
 	at org.assertj.swing.dependency.fest_reflect.field.FieldType.in(FieldType.java:74)
 	at org.assertj.swing.monitor.ProtectingTimerTask.isCanceled(ProtectingTimerTask.java:54)
 	at org.assertj.swing.monitor.ProtectingTimerTask.run(ProtectingTimerTask.java:41)
-	at java.base/java.util.TimerThread.mainLoop(Timer.java:572)
-	at java.base/java.util.TimerThread.run(Timer.java:522)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
 
 ]]></system-err>
   </testcase>
-  <testcase name="testMiddleBottomBox" classname="GameBoardTest" time="2.681">
+  <testcase name="testMiddleBottomBox" classname="GameBoardTest" time="2.721">
     <system-out><![CDATA[Clicking panel: panel_2_4
-the Height is immutable!
 Clicking panel: panel_1_2
 Clicking panel: panel_1_4
 Clicking panel: panel_3_4
 Clicking panel: panel_1_3
-the Width is immutable!
 Clicking panel: panel_2_3
 Clicking panel: panel_3_2
 Clicking panel: panel_3_3
 Clicking panel: panel_2_2
 ]]></system-out>
-    <system-err><![CDATA[May 14, 2025 8:29:02 PM org.assertj.swing.monitor.ProtectingTimerTask handleException
+    <system-err><![CDATA[Jul 27, 2025 5:37:16 PM org.assertj.swing.monitor.ProtectingTimerTask handleException
 WARNING: Exception thrown by a TimerTask
-java.lang.reflect.InaccessibleObjectException: Unable to make field int java.util.TimerTask.state accessible: module java.base does not "opens java.util" to unnamed module @569cfc36
-	at java.base/java.lang.reflect.AccessibleObject.throwInaccessibleObjectException(AccessibleObject.java:388)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:364)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:312)
-	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:183)
-	at java.base/java.lang.reflect.Field.setAccessible(Field.java:177)
+java.lang.reflect.InaccessibleObjectException: Unable to make field int java.util.TimerTask.state accessible: module java.base does not "opens java.util" to unnamed module @76b0bfab
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:178)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:172)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:70)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:60)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.setAccessible(Accessibles.java:57)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.makeAccessible(Accessibles.java:46)
 	at org.assertj.swing.dependency.fest_reflect.field.Invoker.verifyCorrectType(Invoker.java:98)
@@ -677,47 +636,32 @@ java.lang.reflect.InaccessibleObjectException: Unable to make field int java.uti
 	at org.assertj.swing.dependency.fest_reflect.field.FieldType.in(FieldType.java:74)
 	at org.assertj.swing.monitor.ProtectingTimerTask.isCanceled(ProtectingTimerTask.java:54)
 	at org.assertj.swing.monitor.ProtectingTimerTask.run(ProtectingTimerTask.java:41)
-	at java.base/java.util.TimerThread.mainLoop(Timer.java:572)
-	at java.base/java.util.TimerThread.run(Timer.java:522)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
 
 ]]></system-err>
   </testcase>
-  <testcase name="testBottomRightBox" classname="GameBoardTest" time="2.449">
-    <failure message="&#10;Expecting:&#10; &lt;0&gt;&#10;not to be equal to:&#10; &lt;0&gt;&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
-
-Expecting:
- <0>
-not to be equal to:
- <0>
-
-	at GameBoardTest.assertPanelNotEmpty(GameBoardTest.java:690)
-	at GameBoardTest.testBottomRightBox(GameBoardTest.java:170)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-]]></failure>
+  <testcase name="testBottomRightBox" classname="GameBoardTest" time="2.711">
     <system-out><![CDATA[Clicking panel: panel_2_2
 Clicking panel: panel_4_4
-the Width is immutable!
-the Height is immutable!
 Clicking panel: panel_4_2
 Clicking panel: panel_3_2
 Clicking panel: panel_4_3
 Clicking panel: panel_3_3
 Clicking panel: panel_2_4
 Clicking panel: panel_2_3
+Clicking panel: panel_3_4
 ]]></system-out>
-    <system-err><![CDATA[May 14, 2025 8:29:05 PM org.assertj.swing.monitor.ProtectingTimerTask handleException
+    <system-err><![CDATA[Jul 27, 2025 5:37:19 PM org.assertj.swing.monitor.ProtectingTimerTask handleException
 WARNING: Exception thrown by a TimerTask
-java.lang.reflect.InaccessibleObjectException: Unable to make field int java.util.TimerTask.state accessible: module java.base does not "opens java.util" to unnamed module @569cfc36
-	at java.base/java.lang.reflect.AccessibleObject.throwInaccessibleObjectException(AccessibleObject.java:388)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:364)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:312)
-	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:183)
-	at java.base/java.lang.reflect.Field.setAccessible(Field.java:177)
+java.lang.reflect.InaccessibleObjectException: Unable to make field int java.util.TimerTask.state accessible: module java.base does not "opens java.util" to unnamed module @76b0bfab
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:178)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:172)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:70)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:60)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.setAccessible(Accessibles.java:57)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.makeAccessible(Accessibles.java:46)
 	at org.assertj.swing.dependency.fest_reflect.field.Invoker.verifyCorrectType(Invoker.java:98)
@@ -726,12 +670,12 @@ java.lang.reflect.InaccessibleObjectException: Unable to make field int java.uti
 	at org.assertj.swing.dependency.fest_reflect.field.FieldType.in(FieldType.java:74)
 	at org.assertj.swing.monitor.ProtectingTimerTask.isCanceled(ProtectingTimerTask.java:54)
 	at org.assertj.swing.monitor.ProtectingTimerTask.run(ProtectingTimerTask.java:41)
-	at java.base/java.util.TimerThread.mainLoop(Timer.java:572)
-	at java.base/java.util.TimerThread.run(Timer.java:522)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
 
 ]]></system-err>
   </testcase>
-  <testcase name="testInnerWidthChangerRight" classname="GameBoardTest" time="2.207">
+  <testcase name="testInnerWidthChangerRight" classname="GameBoardTest" time="2.227">
     <system-out><![CDATA[Clicking panel: panel_2_2
 Clicking panel: panel_3_2
 Clicking panel: panel_0_0
@@ -740,17 +684,16 @@ Clicking panel: panel_0_2
 Clicking panel: panel_0_3
 Clicking panel: panel_0_4
 ]]></system-out>
-    <system-err><![CDATA[May 14, 2025 8:29:08 PM org.assertj.swing.monitor.ProtectingTimerTask handleException
+    <system-err><![CDATA[Jul 27, 2025 5:37:23 PM org.assertj.swing.monitor.ProtectingTimerTask handleException
 WARNING: Exception thrown by a TimerTask
-java.lang.reflect.InaccessibleObjectException: Unable to make field int java.util.TimerTask.state accessible: module java.base does not "opens java.util" to unnamed module @569cfc36
-	at java.base/java.lang.reflect.AccessibleObject.throwInaccessibleObjectException(AccessibleObject.java:388)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:364)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:312)
-	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:183)
-	at java.base/java.lang.reflect.Field.setAccessible(Field.java:177)
+java.lang.reflect.InaccessibleObjectException: Unable to make field int java.util.TimerTask.state accessible: module java.base does not "opens java.util" to unnamed module @76b0bfab
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:178)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:172)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:70)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:60)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.setAccessible(Accessibles.java:57)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.makeAccessible(Accessibles.java:46)
 	at org.assertj.swing.dependency.fest_reflect.field.Invoker.verifyCorrectType(Invoker.java:98)
@@ -759,17 +702,15 @@ java.lang.reflect.InaccessibleObjectException: Unable to make field int java.uti
 	at org.assertj.swing.dependency.fest_reflect.field.FieldType.in(FieldType.java:74)
 	at org.assertj.swing.monitor.ProtectingTimerTask.isCanceled(ProtectingTimerTask.java:54)
 	at org.assertj.swing.monitor.ProtectingTimerTask.run(ProtectingTimerTask.java:41)
-	at java.base/java.util.TimerThread.mainLoop(Timer.java:572)
-	at java.base/java.util.TimerThread.run(Timer.java:522)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
 
 ]]></system-err>
   </testcase>
-  <testcase name="testInitialBoardIsEmpty" classname="GameBoardTest" time="0.535"/>
-  <testcase name="testBottomRightCornerBorderChanger" classname="GameBoardTest" time="4.829">
+  <testcase name="testInitialBoardIsEmpty" classname="GameBoardTest" time="0.539"/>
+  <testcase name="testBottomRightCornerBorderChanger" classname="GameBoardTest" time="4.958">
     <system-out><![CDATA[Clicking panel: panel_2_2
 Clicking panel: panel_4_4
-the Width is immutable!
-the Height is immutable!
 Clicking panel: panel_0_2
 Clicking panel: panel_0_3
 Clicking panel: panel_0_4
@@ -787,17 +728,16 @@ Clicking panel: panel_3_1
 Clicking panel: panel_4_0
 Clicking panel: panel_4_1
 ]]></system-out>
-    <system-err><![CDATA[May 14, 2025 8:29:11 PM org.assertj.swing.monitor.ProtectingTimerTask handleException
+    <system-err><![CDATA[Jul 27, 2025 5:37:26 PM org.assertj.swing.monitor.ProtectingTimerTask handleException
 WARNING: Exception thrown by a TimerTask
-java.lang.reflect.InaccessibleObjectException: Unable to make field int java.util.TimerTask.state accessible: module java.base does not "opens java.util" to unnamed module @569cfc36
-	at java.base/java.lang.reflect.AccessibleObject.throwInaccessibleObjectException(AccessibleObject.java:388)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:364)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:312)
-	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:183)
-	at java.base/java.lang.reflect.Field.setAccessible(Field.java:177)
+java.lang.reflect.InaccessibleObjectException: Unable to make field int java.util.TimerTask.state accessible: module java.base does not "opens java.util" to unnamed module @76b0bfab
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:178)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:172)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:70)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:60)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.setAccessible(Accessibles.java:57)
 	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.makeAccessible(Accessibles.java:46)
 	at org.assertj.swing.dependency.fest_reflect.field.Invoker.verifyCorrectType(Invoker.java:98)
@@ -806,8 +746,29 @@ java.lang.reflect.InaccessibleObjectException: Unable to make field int java.uti
 	at org.assertj.swing.dependency.fest_reflect.field.FieldType.in(FieldType.java:74)
 	at org.assertj.swing.monitor.ProtectingTimerTask.isCanceled(ProtectingTimerTask.java:54)
 	at org.assertj.swing.monitor.ProtectingTimerTask.run(ProtectingTimerTask.java:41)
-	at java.base/java.util.TimerThread.mainLoop(Timer.java:572)
-	at java.base/java.util.TimerThread.run(Timer.java:522)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
+
+Jul 27, 2025 5:37:28 PM org.assertj.swing.monitor.ProtectingTimerTask handleException
+WARNING: Exception thrown by a TimerTask
+java.lang.reflect.InaccessibleObjectException: Unable to make field int java.util.TimerTask.state accessible: module java.base does not "opens java.util" to unnamed module @76b0bfab
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:178)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:172)
+	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:70)
+	at org.assertj.swing.dependency.fest_reflect.util.Accessibles$SetAccessibleAction.run(Accessibles.java:60)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
+	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.setAccessible(Accessibles.java:57)
+	at org.assertj.swing.dependency.fest_reflect.util.Accessibles.makeAccessible(Accessibles.java:46)
+	at org.assertj.swing.dependency.fest_reflect.field.Invoker.verifyCorrectType(Invoker.java:98)
+	at org.assertj.swing.dependency.fest_reflect.field.Invoker.createInvoker(Invoker.java:74)
+	at org.assertj.swing.dependency.fest_reflect.field.Invoker.newInvoker(Invoker.java:68)
+	at org.assertj.swing.dependency.fest_reflect.field.FieldType.in(FieldType.java:74)
+	at org.assertj.swing.monitor.ProtectingTimerTask.isCanceled(ProtectingTimerTask.java:54)
+	at org.assertj.swing.monitor.ProtectingTimerTask.run(ProtectingTimerTask.java:41)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
 
 ]]></system-err>
   </testcase>
