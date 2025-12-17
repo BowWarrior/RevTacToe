@@ -7,7 +7,7 @@ import java.util.function.IntConsumer;
 import java.util.function.Supplier;
 
 
-public class GameLogic{
+public class GameLogic implements WinChecker{
     public boolean firstPlayersTurn = true;
 
     //these locations are relative to the 5x5 array
@@ -20,6 +20,8 @@ public class GameLogic{
     private int innerBoxWidth = 0;
     private int innerBoxHeight = 0;
 
+    private int roundNum = 0;
+    
     GameLogic(JPanel[][] board, JFrame frame){
         for(int i = 0; i < 5; i++){
             for (int j = 0; j < 5; j++){
@@ -47,7 +49,7 @@ public class GameLogic{
                             placeMove(board[XCoord][YCoord], fontSize, XCoord, YCoord);
                         }
 
-
+                        checkWinX(XCoord);
                         //checkWin(board, innerBoxHeight, innerBoxWidth, XCoord, YCoord);
                     }
                 });
@@ -205,11 +207,59 @@ public class GameLogic{
     //returns true if the dimensions of our move is valid ONLY by checking the (possibly shifting) dimensions
     //Essentially, this makes sure our move is between the board widths and heights
     private static boolean checkDimensions(
-        int boardWidthLoc1, int boardWidthLoc2,
-        int boardHeightLoc1, int boardHeightLoc2,
-        int XCoord, int YCoord
+            int boardWidthLoc1, int boardWidthLoc2,
+            int boardHeightLoc1, int boardHeightLoc2,
+            int XCoord, int YCoord
     ) {
         return XCoord >= boardWidthLoc1 && XCoord <= boardWidthLoc2 && YCoord >= boardHeightLoc1 && YCoord <= boardHeightLoc2;
     }
+
+
+
+    //implemented as interface for future ease of testing
+    @Override
+    public void checkWinX(int XCoord) {
+        //round 5 is the first round a win is possible
+        System.out.println(innerBoxWidth);
+        //System.out.println(roundNum);
+        if(roundNum >= 5){
+            //System.out.println(XCoord);
+            if(innerBoxWidth == 3){
+                System.out.println("check for win horizontally");
+            }
+
+        }
+    }
+
+    @Override
+    public void checkWinY(int YCoord){
+        System.out.println(innerBoxHeight);
+        if(roundNum >= 5){
+            if(innerBoxHeight == 3){
+                System.out.println("check for win vertically");
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }

@@ -1,6 +1,10 @@
+//in terminal, cd into root directory of the project and run 'mvn test' to run all tests
+//or do 'mvn -Dtest=GameBoardTest#testTopRightBox test' to run only the 'testTopRightBox' test
+
 import org.assertj.swing.edt.GuiActionRunner;
 import org.assertj.swing.fixture.FrameFixture;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import javax.swing.*;
@@ -29,7 +33,7 @@ public class GameBoardTest {
         // Verify all 5x5 panels start as gray (empty)
         for (int YCoord = 0; YCoord < 5; YCoord++) {
             for (int XCoord = 0; XCoord < 5; XCoord++) {
-                assertPanelEmpty(YCoord, XCoord);
+                assertPanelEmpty(XCoord, YCoord);
             }
         }
     }
@@ -37,13 +41,13 @@ public class GameBoardTest {
     @Test
     void testPlayerTurnSwitchAfterValidMove() {
         clickPanel(2, 2);
-        assertFalse(game.isFirstPlayersTurn()); // Player 1 -> Player 2
+        Assertions.assertFalse(game.isFirstPlayersTurn()); //player 1 -> player 2
         assertPanelNotEmpty(2, 2);
         assertPlayer1(2, 2);
         assertPanelColor(2, 2, Color.BLACK);
 
         clickPanel(2, 1);
-        assertTrue(game.isFirstPlayersTurn()); // Player 2 -> Player 1
+        Assertions.assertTrue(game.isFirstPlayersTurn()); //player 2 -> player 1
         assertPanelNotEmpty(2, 1);
         assertPlayer2(2, 1);
         assertPanelColor(2, 1, Color.BLACK);
