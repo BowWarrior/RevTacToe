@@ -15,6 +15,7 @@ public class GameBoardTest {
     private myFrame frame;
     private GameLogic game;
 
+
     @BeforeEach
     void setUp() {
         // Initialize the GUI and GameLogic on the Event Dispatch Thread (EDT)
@@ -672,7 +673,6 @@ public class GameBoardTest {
 
 
 
-
     private void clickPanel(int XCoord, int YCoord) {
         String panelName = "panel_" + XCoord + "_" + YCoord   ;
         System.out.println("Clicking panel: " + panelName);
@@ -702,6 +702,7 @@ public class GameBoardTest {
         JLabel label = (JLabel) components[0];
         assertThat(label.getText()).isEqualTo("O");
     }
+
 
     @AfterEach
     void tearDown() {
