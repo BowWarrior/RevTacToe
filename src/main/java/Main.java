@@ -17,9 +17,9 @@ to push to github in terminal:
 6. git pull origin 'changes'
 */
 
-//to run the java file in terminal (from directory RevTacToe folder):
-//DOES NOT WORK WITH INTELLIJ. ONLY VS CODE TERMINAL, POWERSHELL, AND CMD
-//java -cp target\classes Main
+//1. cd to RevTacToe
+//2. run 'mvn test'
+
 
 public class Main {
     public static void main(String[] args) {
