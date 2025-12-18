@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="03beefb6-cbcc-4d68-b8df-4d8dd6cb0a1a" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2vDivp5czybHm0rCgIyFeM9DW2p" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.App.executor": "Run",
+    "Application.Main.executor": "Run",
+    "JUnit.GameBoardTest.executor": "Run",
+    "JUnit.GameBoardTest.testBottomLeftBox.executor": "Run",
+    "JUnit.GameBoardTest.testBottomRightBox.executor": "Run",
+    "JUnit.GameBoardTest.testClickOnTopLeftPanel.executor": "Run",
+    "JUnit.GameBoardTest.testInitialBoardIsEmpty.executor": "Run",
+    "JUnit.GameBoardTest.testInvalidMoveOnOccupiedCell.executor": "Run",
+    "JUnit.GameBoardTest.testMiddlTopBox.executor": "Run",
+    "JUnit.GameBoardTest.testMiddleBottomBox.executor": "Run",
+    "JUnit.GameBoardTest.testMiddleLeftBox.executor": "Run",
+    "JUnit.GameBoardTest.testMiddleRightBox.executor": "Run",
+    "JUnit.GameBoardTest.testMiddleTopBox.executor": "Run",
+    "JUnit.GameBoardTest.testMiddleTopLeftBox.executor": "Run",
+    "JUnit.GameBoardTest.testNormalBox.executor": "Run",
+    "JUnit.GameBoardTest.testPlayerTurnSwitchAfterValidMove.executor": "Run",
+    "JUnit.GameBoardTest.testPossibleBoxes.executor": "Run",
+    "JUnit.GameBoardTest.testTopLeftBox.executor": "Run",
+    "JUnit.GameBoardTest.testTopRightBox.executor": "Run",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "Maven.RevTacToe [clean].executor": "Run",
+    "Maven.RevTacToe [install].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="RevTacToe" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameBoardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RevTacToe" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GameBoardTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameBoardTest.testMiddleLeftBox" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RevTacToe" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GameBoardTest" />
+      <option name="METHOD_NAME" value="testMiddleLeftBox" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameBoardTest.testMiddleRightBox" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RevTacToe" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GameBoardTest" />
+      <option name="METHOD_NAME" value="testMiddleRightBox" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameBoardTest.testNormalBox" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RevTacToe" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GameBoardTest" />
+      <option name="METHOD_NAME" value="testNormalBox" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.GameBoardTest" />
+        <item itemvalue="JUnit.GameBoardTest.testMiddleRightBox" />
+        <item itemvalue="JUnit.GameBoardTest.testMiddleLeftBox" />
+        <item itemvalue="JUnit.GameBoardTest.testNormalBox" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="03beefb6-cbcc-4d68-b8df-4d8dd6cb0a1a" name="Changes" comment="" />
+      <created>1743686279780</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1743686279780</updated>
+      <workItem from="1743686280840" duration="32168000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/GameBoardTest.java</url>
+          <line>173</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/GameBoardTest.java</url>
+          <line>236</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/GameBoardTest.java</url>
+          <line>204</line>
+          <properties class="GameBoardTest" method="testMiddleBottomBox">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

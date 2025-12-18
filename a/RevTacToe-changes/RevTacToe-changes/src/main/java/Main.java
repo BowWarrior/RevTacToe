@@ -1,5 +1,3 @@
-//hi
-
 //git status                                                                          -> checks status of git in my folder
 //git checkout changes                                                                -> switches branches to 'changes' branch
 //git add .                                                                           -> adds everything to my branch
