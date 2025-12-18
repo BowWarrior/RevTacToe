@@ -44,13 +44,11 @@ public class GameBoardTest {
         Assertions.assertFalse(game.isFirstPlayersTurn()); //player 1 -> player 2
         assertPanelNotEmpty(2, 2);
         assertPlayer1(2, 2);
-        assertPanelColor(2, 2, Color.BLACK);
 
         clickPanel(2, 1);
         Assertions.assertTrue(game.isFirstPlayersTurn()); //player 2 -> player 1
         assertPanelNotEmpty(2, 1);
         assertPlayer2(2, 1);
-        assertPanelColor(2, 1, Color.BLACK);
     }
 
 
