@@ -335,44 +335,26 @@ public class GameBoardTest {
         clickPanel(1, 2);
         assertPanelNotEmpty(1, 2);
 
-        clickPanel(4, 0);
-        assertPanelEmpty(4, 0);
-
-        clickPanel(4, 1);
-        assertPanelEmpty(4, 1);
-
-        clickPanel(4, 2);
-        assertPanelEmpty(4, 2);
-
-        clickPanel(4, 3);
-        assertPanelEmpty(4, 3);
-
-        clickPanel(4, 4);
-        assertPanelEmpty(4, 4);
+        for (int i = 0; i < 5; i++){
+            clickPanel(4, i);
+            assertPanelEmpty(4, i);
+            assertPanelColor(4, i, Color.red);
+        }
     }
 
     @Test
-    void testInnerWidthChangerRight(){
+    void testInnerWidthChangerRight() {
         clickPanel(2, 2);
         assertPanelNotEmpty(2, 2);
 
         clickPanel(3, 2);
         assertPanelNotEmpty(3, 2);
 
-        clickPanel(0, 0);
-        assertPanelEmpty(4, 0);
-
-        clickPanel(0, 1);
-        assertPanelEmpty(0, 1);
-
-        clickPanel(0, 2);
-        assertPanelEmpty(0, 2);
-
-        clickPanel(0, 3);
-        assertPanelEmpty(0, 3);
-
-        clickPanel(0, 4);
-        assertPanelEmpty(0, 4);
+        for (int i = 0; i < 5; i++) {
+            clickPanel(0, i);
+            assertPanelEmpty(0, i);
+            assertPanelColor(0, i, Color.red);
+        }
     }
 
     @Test
@@ -383,35 +365,16 @@ public class GameBoardTest {
         clickPanel(0, 2);
         assertPanelNotEmpty(0, 2);
 
-        clickPanel(3, 0);
-        assertPanelEmpty(3, 0);
-
-        clickPanel(3, 1);
-        assertPanelEmpty(3, 1);
-
-        clickPanel(3, 2);
-        assertPanelEmpty(3, 2);
-
-        clickPanel(3, 3);
-        assertPanelEmpty(3, 3);
-
-        clickPanel(3, 4);
-        assertPanelEmpty(3, 4);
-
-        clickPanel(4, 0);
-        assertPanelEmpty(4, 0);
-
-        clickPanel(4, 1);
-        assertPanelEmpty(4, 1);
-
-        clickPanel(4, 2);
-        assertPanelEmpty(4, 2);
-
-        clickPanel(4, 3);
-        assertPanelEmpty(4, 3);
-
-        clickPanel(4, 4);
-        assertPanelEmpty(4, 4);
+        for (int i = 0; i < 5; i++){
+            clickPanel(3, i);
+            assertPanelEmpty(3, i);
+            assertPanelColor(3, i, Color.red);
+        }
+        for (int i = 0; i < 5; i++){
+            clickPanel(4, i);
+            assertPanelEmpty(4, i);
+            assertPanelColor(4, i, Color.red);
+        }
 
     }
 
@@ -423,35 +386,17 @@ public class GameBoardTest {
         clickPanel(4, 2);
         assertPanelNotEmpty(4, 2);
 
-        clickPanel(1, 0);
-        assertPanelEmpty(1, 0);
+        for (int i = 0; i < 5; i++) {
+            clickPanel(1, i);
+            assertPanelEmpty(1, i);
+            assertPanelColor(1, i, Color.red);
+        }
 
-        clickPanel(1, 1);
-        assertPanelEmpty(1, 1);
-
-        clickPanel(1, 2);
-        assertPanelEmpty(1, 2);
-
-        clickPanel(1, 3);
-        assertPanelEmpty(1, 3);
-
-        clickPanel(1, 4);
-        assertPanelEmpty(1, 4);
-
-        clickPanel(0, 0);
-        assertPanelEmpty(0, 0);
-
-        clickPanel(0, 1);
-        assertPanelEmpty(0, 1);
-
-        clickPanel(0, 2);
-        assertPanelEmpty(0, 2);
-
-        clickPanel(0, 3);
-        assertPanelEmpty(0, 3);
-
-        clickPanel(0, 4);
-        assertPanelEmpty(0, 4);
+        for (int i = 0; i < 5; i++){
+            clickPanel(0, i);
+            assertPanelEmpty(0, i);
+            assertPanelColor(0, i, Color.red);
+        }
     }
 
     @Test
@@ -462,20 +407,11 @@ public class GameBoardTest {
         clickPanel(2, 1);
         assertPanelNotEmpty(2, 1);
 
-        clickPanel(0, 4);
-        assertPanelEmpty(0, 1);
-
-        clickPanel(1, 4);
-        assertPanelEmpty(1, 4);
-
-        clickPanel(2, 4);
-        assertPanelEmpty(2, 4);
-
-        clickPanel(3, 4);
-        assertPanelEmpty(3, 4);
-
-        clickPanel(4, 4);
-        assertPanelEmpty(4, 4);
+        for (int i = 0; i < 5; i++){
+            clickPanel(i, 4);
+            assertPanelEmpty(i, 4);
+            assertPanelColor(i, 4, Color.red);
+        }
     }
 
     @Test
@@ -486,20 +422,11 @@ public class GameBoardTest {
         clickPanel(2, 3);
         assertPanelNotEmpty(2, 3);
 
-        clickPanel(0, 0);
-        assertPanelEmpty(0, 0);
-
-        clickPanel(1, 0);
-        assertPanelEmpty(1, 0);
-
-        clickPanel(2, 0);
-        assertPanelEmpty(2, 0);
-
-        clickPanel(3, 0);
-        assertPanelEmpty(3, 0);
-
-        clickPanel(4, 0);
-        assertPanelEmpty(4, 0);
+        for (int i = 0; i < 5; i++){
+            clickPanel(i, 0);
+            assertPanelEmpty(i, 0);
+            assertPanelColor(i, 0, Color.red);
+        }
     }
 
     @Test
@@ -510,36 +437,17 @@ public class GameBoardTest {
         clickPanel(2, 0);
         assertPanelNotEmpty(2, 0);
 
-        clickPanel(0, 3);
-        assertPanelEmpty(0, 3);
+        for (int i = 0; i < 5; i++){
+            clickPanel(i, 3);
+            assertPanelEmpty(i, 3);
+            assertPanelColor(i, 3, Color.red);
+        }
 
-        clickPanel(1, 3);
-        assertPanelEmpty(1, 3);
-
-        clickPanel(2, 3);
-        assertPanelEmpty(2, 3);
-
-        clickPanel(3, 3);
-        assertPanelEmpty(3, 3);
-
-        clickPanel(4, 3);
-        assertPanelEmpty(4, 3);
-
-        clickPanel(0, 4);
-        assertPanelEmpty(0, 4);
-
-        clickPanel(1, 4);
-        assertPanelEmpty(1, 4);
-
-        clickPanel(2, 4);
-        assertPanelEmpty(2, 4);
-
-        clickPanel(3, 4);
-        assertPanelEmpty(3, 4);
-
-        clickPanel(4, 4);
-        assertPanelEmpty(4, 4);
-
+        for (int i = 0; i < 5; i++){
+            clickPanel(i, 4);
+            assertPanelEmpty(i, 4);
+            assertPanelColor(i, 4, Color.red);
+        }
     }
 
     @Test
@@ -550,35 +458,19 @@ public class GameBoardTest {
         clickPanel(2, 4);
         assertPanelNotEmpty(2, 4);
 
-        clickPanel(0, 0);
-        assertPanelEmpty(0, 0);
+        for (int i = 0; i < 5; i++) {
+            clickPanel(i, 0);
+            assertPanelEmpty(i, 0);
+            assertPanelColor(i, 0, Color.red);
+        }
 
-        clickPanel(1, 0);
-        assertPanelEmpty(1, 0);
+        for (int i = 0; i < 5; i++){
+            clickPanel(i, 1);
+            assertPanelEmpty(i, 1);
+            assertPanelColor(i, 1, Color.red);
+        }
 
-        clickPanel(2, 0);
-        assertPanelEmpty(2, 0);
 
-        clickPanel(3, 0);
-        assertPanelEmpty(3, 0);
-
-        clickPanel(4, 0);
-        assertPanelEmpty(4, 0);
-
-        clickPanel(0, 1);
-        assertPanelEmpty(0, 1);
-
-        clickPanel(1, 1);
-        assertPanelEmpty(1, 1);
-
-        clickPanel(2, 1);
-        assertPanelEmpty(2, 1);
-
-        clickPanel(3, 1);
-        assertPanelEmpty(3, 1);
-
-        clickPanel(4, 1);
-        assertPanelEmpty(4, 1);
     }
 
 
@@ -602,6 +494,7 @@ public class GameBoardTest {
             for(int j = 3; j < 5; j++){
                 clickPanel(i, j);
                 assertPanelEmpty(i, j);
+                assertPanelColor(i, j, Color.red);
             }
         }
     }
@@ -624,6 +517,7 @@ public class GameBoardTest {
             for(int j = 3; j < 5; j++){
                 clickPanel(i, j);
                 assertPanelEmpty(i, j);
+                assertPanelColor(i, j, Color.red);
             }
         }
     }
@@ -646,6 +540,7 @@ public class GameBoardTest {
             for(int j = 0; j < 2; j++){
                 clickPanel(i, j);
                 assertPanelEmpty(i, j);
+                assertPanelColor(i, j, Color.red);
             }
         }
     }
@@ -668,9 +563,12 @@ public class GameBoardTest {
             for(int j = 0; j < 2; j++){
                 clickPanel(i, j);
                 assertPanelEmpty(i, j);
+                assertPanelColor(i, j, Color.red);
             }
         }
     }
+
+
 
 
 
