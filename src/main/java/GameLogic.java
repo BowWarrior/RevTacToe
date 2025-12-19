@@ -2,9 +2,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.util.function.Consumer;
-import java.util.function.IntConsumer;
-import java.util.function.Supplier;
 
 
 public class GameLogic implements WinChecker{
@@ -20,7 +17,7 @@ public class GameLogic implements WinChecker{
     private int innerBoxWidth = 0;
     private int innerBoxHeight = 0;
 
-    private int roundNum = 0;
+    private final int roundNum = 0;
 
     GameLogic(JPanel[][] board, JFrame frame){
         for(int i = 0; i < 5; i++){
@@ -46,7 +43,7 @@ public class GameLogic implements WinChecker{
                         //board[row][col].removeAll();
                         //board[row][col].getComponent(board[row][col])
                         if(board[row][col].getComponentCount() == 0 && checkDimensions(boardWidthLoc1, boardWidthLoc2, boardHeightLoc1, boardHeightLoc2, row, col)) {
-                            placeMove(board[row][col], fontSize, row, col);
+                            placeMove(board, fontSize, row, col);
                         }
 
                         //checkWinX(row);
@@ -74,19 +71,24 @@ public class GameLogic implements WinChecker{
         //System.out.println("was unhovered!");
     }
 
-    void placeMove(JPanel tempPanel, int fontSize, int row, int col){
-        //these 2 if statements make sure that the playable board is updated
+    void placeMove(JPanel[][] board, int fontSize, int row, int col){
+        JPanel tempPanel = board[row][col];
+        boolean isVertical; //describes if the move played is right/left or up/down which
+                                    // is used when shading unplayable squares
 
+        //these 2 if statements make sure that the playable board is updated
         if(row != 2 && innerBoxHeight != 3) {
-            updateDimension(row, heightAxis, tempPanel);
+            isVertical = true;
+            updateDimension(board, row, heightAxis, isVertical);
             updateHeight();
         }
         if(col != 2 && innerBoxWidth != 3) {
-            updateDimension(col, widthAxis, tempPanel);
+            isVertical = false;
+            updateDimension(board, col, widthAxis, isVertical);
             updateWidth();
         }
 
-        String playerTurn = "";
+        String playerTurn;
         if(firstPlayersTurn){
             playerTurn = "X";
             placeMove(tempPanel, fontSize, playerTurn);
@@ -163,27 +165,84 @@ public class GameLogic implements WinChecker{
     //this block says if the inner box's width or height is 3,
     //then we should not be able to change either the widths/heights anymore
     //also makes sure if we play on the edge of the board, the inner box width is immutable
-    private void updateDimension(int coord, BoardAxis axis, JPanel tempPanel) {
+    private void updateDimension(JPanel[][] board, int coord, BoardAxis axis, boolean isVertical) {
 
         //this makes sure if our inner box width or height is 3, that we can't change dimensions of the box anymore
         int subtractedValue = axis.edge2 - axis.edge1;
+
 
         if (coord == 4 || coord == 0 || subtractedValue == 2) {
             axis.innerSize = 3;
             if (coord == 4) {
                 axis.edge1 = 2;
+
+                if(!isVertical) {
+                    for (int i = 0; i < 5; i++) {
+                        for (int j = 0; j < 2; j++) {
+                            board[i][j].setBackground(Color.red);
+                        }
+                    }
+                } else if (isVertical) {
+                    for (int i = 0; i < 2; i++) {
+                        for (int j = 0; j < 5; j++) {
+                            board[i][j].setBackground(Color.red);
+                        }
+                    }
+                }
             } else if (coord == 0) {
                 axis.edge2 = 2;
+
+                if(isVertical) {
+                    for (int i = 3; i < 5; i++) {
+                        for (int j = 0; j < 5; j++) {
+                            board[i][j].setBackground(Color.red);
+                        }
+                    }
+                } else if(!isVertical) {
+                    for (int i = 0; i < 5; i++) {
+                        for (int j = 3; j < 5; j++) {
+                            board[i][j].setBackground(Color.red);
+                        }
+                    }
+                }
             }
         }
 
         //makes it so when you place a move not on the edges that it will keep track
-        //of when to set edge2 to 3 and edge1 to 1. Also, this if statement can only be called once
-        //because edge1 and edge2 will never be equal to 4 or 0 after it's run once
+        //of when to set edge2 to 3 and edge1 to 1.
         if (coord == 1 && axis.edge2 == 4) {
             axis.edge2 -= 1;
+
+            if(!isVertical) {
+                for (int i = 0; i < 5; i++) {
+                    for (int j = 4; j < 5; j++) {
+                        board[i][j].setBackground(Color.red);
+                    }
+                }
+            } else if (isVertical) {
+                for (int i = 4; i < 5; i++) {
+                    for (int j = 0; j < 5; j++) {
+                        board[i][j].setBackground(Color.red);
+                    }
+                }
+            }
+
         } else if (coord == 3 && axis.edge1 == 0) {
             axis.edge1 += 1;
+
+            if(isVertical) {
+                for (int i = 0; i < 1; i++) {
+                    for (int j = 0; j < 5; j++) {
+                        board[i][j].setBackground(Color.red);
+                    }
+                }
+            } else if (!isVertical) {
+                for (int i = 0; i < 5; i++) {
+                    for (int j = 0; j < 1; j++) {
+                        board[i][j].setBackground(Color.red);
+                    }
+                }
+            }
         }
     }
 
@@ -242,6 +301,8 @@ public class GameLogic implements WinChecker{
             }
         }
     }
+
+
 
 
 
