@@ -215,15 +215,11 @@ public class GameLogic implements WinChecker{
 
             if(!isVertical) {
                 for (int i = 0; i < 5; i++) {
-                    for (int j = 4; j < 5; j++) {
-                        board[i][j].setBackground(Color.red);
-                    }
+                    board[i][4].setBackground(Color.red);
                 }
             } else if (isVertical) {
-                for (int i = 4; i < 5; i++) {
-                    for (int j = 0; j < 5; j++) {
-                        board[i][j].setBackground(Color.red);
-                    }
+                for (int j = 0; j < 5; j++) {
+                    board[4][j].setBackground(Color.red);
                 }
             }
 
@@ -231,16 +227,12 @@ public class GameLogic implements WinChecker{
             axis.edge1 += 1;
 
             if(isVertical) {
-                for (int i = 0; i < 1; i++) {
-                    for (int j = 0; j < 5; j++) {
-                        board[i][j].setBackground(Color.red);
-                    }
+                for (int j = 0; j < 5; j++) {
+                    board[0][j].setBackground(Color.red);
                 }
             } else if (!isVertical) {
                 for (int i = 0; i < 5; i++) {
-                    for (int j = 0; j < 1; j++) {
-                        board[i][j].setBackground(Color.red);
-                    }
+                    board[i][0].setBackground(Color.red);
                 }
             }
         }
