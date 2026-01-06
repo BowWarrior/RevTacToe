@@ -75,7 +75,7 @@ public class GameLogic implements RecursiveWinChecker{
 
 
 
-
+    //needed in the colorPanels() function when we need to color either the rows or columns
     void valueSwapperFunction(int[] valueSwapper, int i, int j, boolean isRow){
         if(isRow){
             valueSwapper[0] = j;
@@ -86,7 +86,7 @@ public class GameLogic implements RecursiveWinChecker{
         }
     }
 
-
+    //this function can be used to color both rows and columns (it's versatile)
     void colorPanels(JPanel[][] board, int rowORcol, Color color, boolean isRow){
         int[] valueSwapper = new int[2];
         if(rowORcol == 0){
@@ -125,13 +125,13 @@ public class GameLogic implements RecursiveWinChecker{
     }
 
     void hoverMove(JPanel[][] board, int row, int col){
-        colorPanels(board, row, Color.pink, true);
-        colorPanels(board, col, Color.pink, false);
+        colorPanels(board, row, Color.pink, true); //colors rows
+        colorPanels(board, col, Color.pink, false); //colors columns
     }
 
     void unHoverMove(JPanel[][] board, int row, int col){
-        colorPanels(board, row, Color.gray, true);
-        colorPanels(board, col, Color.gray, false);
+        colorPanels(board, row, Color.gray, true); //colors rows
+        colorPanels(board, col, Color.gray, false); //colors columns
     }
 
 
