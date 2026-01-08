@@ -18,6 +18,10 @@ to push to github in terminal:
 //1. cd to RevTacToe
 //2. run 'mvn test'
 
+//TO RUN FROM TERMINAL RUN THE FOLLOWING:
+//mvn clean compile
+//mvn exec:java
+
 
 public class Main {
     public static void main(String[] args) {
