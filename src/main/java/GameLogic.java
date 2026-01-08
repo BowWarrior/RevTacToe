@@ -21,7 +21,7 @@ public class GameLogic implements RecursiveWinChecker{
     private int innerBoxWidth = 0;
     private int innerBoxHeight = 0;
 
-    private final int roundNum = 0;
+    private int roundNum = 0;
 
     GameLogic(JPanel[][] board, JFrame frame){
         for(int i = 0; i < 5; i++){
@@ -58,7 +58,15 @@ public class GameLogic implements RecursiveWinChecker{
 
                         //checkWinX(row);
                         //checkWin(board, innerBoxHeight, innerBoxWidth, row, col);
-                        checkWin(board);
+
+
+
+                        //only when 5 rounds have passed can the be a win (otherwise each player has played less than 3x)
+                        if(roundNum >= 5) {
+                            checkWin(board);
+                        }
+                        roundNum += 1;
+                        System.out.println(roundNum);
                     }
                 });
             }
@@ -75,49 +83,66 @@ public class GameLogic implements RecursiveWinChecker{
 
 
 
-    //needed in the colorPanels() function when we need to color either the rows or columns
-    void valueSwapperFunction(int[] valueSwapper, int i, int j, boolean isRow){
-        if(isRow){
-            valueSwapper[0] = j;
-            valueSwapper[1] = i;
-        } else{
-            valueSwapper[0] = i;
-            valueSwapper[1] = j;
-        }
-    }
 
-    //this function can be used to color both rows and columns (it's versatile)
-    void colorPanels(JPanel[][] board, int rowORcol, Color color, boolean isRow){
-        int[] valueSwapper = new int[2];
-        if(rowORcol == 0){
+
+    void colorRowPanels(JPanel[][] board, int row, Color color){
+        if(row == 0){
             for(int i = 0; i < 5; i++){
                 for(int j = 3; j < 5; j++){
-                    valueSwapperFunction(valueSwapper, i, j, isRow);
-                    if(board[valueSwapper[0]][valueSwapper[1]].getBackground() != Color.red) {
-                        board[valueSwapper[0]][valueSwapper[1]].setBackground(color);
+                    if(board[j][i].getBackground() != Color.red) {
+                        board[j][i].setBackground(color);
                     }
                 }
             }
-        } else if(rowORcol == 1){
+        } else if(row== 1){
             for(int i = 0; i < 5; i++){
-                valueSwapperFunction(valueSwapper, i, 4, isRow);
-                if(board[valueSwapper[0]][valueSwapper[1]].getBackground() != Color.red) {
-                    board[valueSwapper[0]][valueSwapper[1]].setBackground(color);
+                if(board[4][i].getBackground() != Color.red) {
+                    board[4][i].setBackground(color);
                 }
             }
-        } else if(rowORcol == 3){
+        } else if(row == 3){
             for(int i = 0; i < 5; i++){
-                valueSwapperFunction(valueSwapper, i, 0, isRow);
-                if(board[valueSwapper[0]][valueSwapper[1]].getBackground() != Color.red) {
-                    board[valueSwapper[0]][valueSwapper[1]].setBackground(color);
+                if(board[0][i].getBackground() != Color.red) {
+                    board[0][i].setBackground(color);
                 }
             }
-        }else if(rowORcol == 4){
+        }else if(row == 4){
             for(int i = 0; i < 5; i++){
                 for(int j = 0; j < 2; j++){
-                    valueSwapperFunction(valueSwapper, i, j, isRow);
-                    if(board[valueSwapper[0]][valueSwapper[1]].getBackground() != Color.red) {
-                        board[valueSwapper[0]][valueSwapper[1]].setBackground(color);
+                    if(board[j][i].getBackground() != Color.red) {
+                        board[j][i].setBackground(color);
+                    }
+                }
+            }
+        }
+    }
+
+    void colorColPanels(JPanel[][] board, int col, Color color){
+        if(col == 0){
+            for(int i = 0; i < 5; i++){
+                for(int j = 3; j < 5; j++){
+                    if(board[i][j].getBackground() != Color.red) {
+                        board[i][j].setBackground(color);
+                    }
+                }
+            }
+        } else if(col == 1){
+            for(int i = 0; i < 5; i++){
+                if(board[i][4].getBackground() != Color.red) {
+                    board[i][4].setBackground(color);
+                }
+            }
+        } else if(col == 3){
+            for(int i = 0; i < 5; i++){
+                if(board[i][0].getBackground() != Color.red) {
+                    board[i][0].setBackground(color);
+                }
+            }
+        }else if(col == 4){
+            for(int i = 0; i < 5; i++){
+                for(int j = 0; j < 2; j++){
+                    if(board[i][j].getBackground() != Color.red) {
+                        board[i][j].setBackground(color);
                     }
                 }
             }
@@ -125,14 +150,15 @@ public class GameLogic implements RecursiveWinChecker{
     }
 
     void hoverMove(JPanel[][] board, int row, int col){
-        colorPanels(board, row, Color.pink, true); //colors rows
-        colorPanels(board, col, Color.pink, false); //colors columns
+        colorRowPanels(board, row, Color.pink);
+        colorColPanels(board, col, Color.pink);
     }
 
     void unHoverMove(JPanel[][] board, int row, int col){
-        colorPanels(board, row, Color.gray, true); //colors rows
-        colorPanels(board, col, Color.gray, false); //colors columns
+        colorRowPanels(board, row, Color.gray);
+        colorColPanels(board, col, Color.gray);
     }
+
 
 
 
