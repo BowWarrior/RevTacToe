@@ -1,12 +1,10 @@
-//NEED TO DO:
-//1. see if I can somehow refactor 'colorColPanels' and 'colorRowPanels' to be the same function
-//2. find a way to see if a JPanel has an 'X' in it
+//get rid up duplicate code in updateDimension
+//make winchecker
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-
 
 public class GameLogic implements RecursiveWinChecker{
     public boolean firstPlayersTurn = true;
@@ -62,9 +60,13 @@ public class GameLogic implements RecursiveWinChecker{
 
 
                         //only when 5 rounds have passed can the be a win (otherwise each player has played less than 3x)
-                        if(roundNum >= 5) {
-                            checkWin(board);
-                        }
+                        //if(roundNum >= 5) {
+                            if(checkWin(board, board[row][col]) == 0){
+                                System.out.println("no win yet");
+                            }else{
+                                System.out.println("WINNNNNNNNNN");
+                            }   //uncomment the above if once done with checkWin()
+                        //}
 
                         roundNum += 1;
                     }
@@ -292,8 +294,8 @@ public class GameLogic implements RecursiveWinChecker{
                     board[i][4].setBackground(Color.red);
                 }
             } else if (isVertical) {
-                for (int j = 0; j < 5; j++) {
-                    board[4][j].setBackground(Color.red);
+                for (int i = 0; i < 5; i++) {
+                    board[4][i].setBackground(Color.red);
                 }
             }
 
@@ -301,8 +303,8 @@ public class GameLogic implements RecursiveWinChecker{
             axis.edge1 += 1;
 
             if(isVertical) {
-                for (int j = 0; j < 5; j++) {
-                    board[0][j].setBackground(Color.red);
+                for (int i = 0; i < 5; i++) {
+                    board[0][i].setBackground(Color.red);
                 }
             } else if (!isVertical) {
                 for (int i = 0; i < 5; i++) {
@@ -345,58 +347,50 @@ public class GameLogic implements RecursiveWinChecker{
 
     //implemented as interface for future ease of testing
     @Override
-    public void checkWin(JPanel[][] board) {
-        //round 5 is the first round a win is possible
-        //System.out.println(innerBoxWidth);
-        //System.out.println(roundNum);
-        for (int i = 0; i < board.length; i++) {
-            for (int j = 0; j < board[i].length; j++) {
-                lookAhead(board, i, j);
-            }
-        }
-
-        int count = 0;
-        //while(){
-
-            //use function to test if the current panel has an 'X' or an 'O'
-        //}
-    }
-
-    //false means don't consider next panel (skip it)
-    //true means there could be a win i.e. there were 2 'x' in a row, so continue the check
-    private boolean lookAhead(JPanel[][] board, int i, int j) {
-        if(board[i][j].getComponentCount() == 0){
-            return false;
-        }
-
-        //keeps track of if we are placing "X" or "O"
-        Component[] components = board[i][j].getComponents();
+    public int checkWin(JPanel[][] board, JPanel panel) {
+        Component[] components = panel.getComponents();
         JLabel label = (JLabel) components[0];
 
-        if( (i - 1) >= 0 && (i + 1) < 5 && checkX(board, i+1, j, label)){ //checks next square in x direction
-            return true;
-        } else if( (j - 1) >= 0 && (j + 1) < 5 && checkY(board, i, j+1)){ //checks next square in y direction
-            return true;
-        } else if(checkDiagonal(board, i+1, j+1)){ //checks next square in diagonal direction
-            return true;
+        int i = 0;
+        int j = 0;
+
+        if(board[i][j].getComponentCount() == 0){
+            return 0;
+        } else {
+            checkX(board, i, j, label);
+            checkY(board, i, j, label);
+            checkDiagonal(board, i, j, label);
+
         }
-        return false;
+
+
+
+
+
+
+
+
+
+        return 0;
     }
+
 
 
     private boolean checkX(JPanel[][] board, int i, int j, JLabel label) {
 
         System.out.println(label.getText().equals("X"));
 
-        return false;
-    }
-
-    private boolean checkY(JPanel[][] board, int i, int j) {
+        //if()
 
         return false;
     }
 
-    private boolean checkDiagonal(JPanel[][] board, int i, int j) {
+    private boolean checkY(JPanel[][] board, int i, int j, JLabel label) {
+
+        return false;
+    }
+
+    private boolean checkDiagonal(JPanel[][] board, int i, int j, JLabel label) {
 
         return false;
     }

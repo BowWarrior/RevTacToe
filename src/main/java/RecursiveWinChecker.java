@@ -2,6 +2,6 @@
 import javax.swing.*;
 
 public interface RecursiveWinChecker {
-    void checkWin(JPanel[][] board);
+    int checkWin(JPanel[][] board, JPanel panel);
 
 }
