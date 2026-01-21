@@ -11,17 +11,18 @@ to push to github in terminal:
 8. git pull origin 'changes'
 */
 
-//TO RUN TESTS FROM TERMINAL RUN THE FOLLOWING:
+//TO RUN TESTS FROM TERMINAL (Windows OR Linux):
 //1. cd to RevTacToe
 //2. run 'mvn test'
 
 //TO RUN FROM WINDOWS TERMINAL RUN THE FOLLOWING:
-//mvn clean compile
-//mvn exec:java
+//1. mvn clean compile
+//2. mvn exec:java
 
 //ON LINUX RUN:
 //1. mvn clean compile
 //2. java -cp target/classes Main
+
 
 
 public class Main {
