@@ -28,6 +28,9 @@
         <version>3.1.0</version>
         <configuration>
           <mainClass>Main</mainClass>
+          <environmentVariables>
+            <DISPLAY>${env.DISPLAY}</DISPLAY>
+          </environmentVariables>
         </configuration>
       </plugin>
     </plugins>
