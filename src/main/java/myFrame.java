@@ -4,8 +4,11 @@ import java.awt.event.*;
 
 
 public class myFrame extends JFrame{
+    private int row = 5;
+    private int col = 5;
+
     GameLogic game;
-    public JPanel[][] board = new JPanel[5][5];
+    public JPanel[][] board = new JPanel[row][col];
     myFrame(){
 
         this.setTitle("Revitalized Tic Tac Toe");
@@ -15,12 +18,12 @@ public class myFrame extends JFrame{
         
         //adds the primary panel
         JPanel primaryPanel = new JPanel();
-        primaryPanel.setLayout(new GridLayout(5, 5));
+        primaryPanel.setLayout(new GridLayout(row, col));
         primaryPanel.setPreferredSize(new Dimension(500, 500));
         
         //adds the 5x5 panels to the primary panel
-        for(int i = 0; i < 5; i++){
-            for(int j = 0; j < 5; j++){
+        for(int i = 0; i < row; i++){
+            for(int j = 0; j < col; j++){
                 //need to instantiate a new panel each time we run the loop
                 board[i][j] = new JPanel();
                 board[i][j].setName("panel_" + i + "_" + j);
@@ -41,7 +44,7 @@ public class myFrame extends JFrame{
         game = new GameLogic(board, this);
     }
     public GameLogic getGameLogic() {
-        return game; // Returns the game logic instance
+        return game; //returns the game logic instance
     }
 
 }

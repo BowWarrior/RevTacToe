@@ -1,10 +1,12 @@
+//get rid up duplicate code in updateDimension
+//make winchecker
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-
-public class GameLogic implements WinChecker{
+public class GameLogic implements RecursiveWinChecker{
     public boolean firstPlayersTurn = true;
 
     //these locations are relative to the 5x5 array
@@ -17,7 +19,7 @@ public class GameLogic implements WinChecker{
     private int innerBoxWidth = 0;
     private int innerBoxHeight = 0;
 
-    private final int roundNum = 0;
+    private int roundNum = 0;   //keeps track of how many total turns have passed
 
     GameLogic(JPanel[][] board, JFrame frame){
         for(int i = 0; i < 5; i++){
@@ -29,12 +31,14 @@ public class GameLogic implements WinChecker{
                     //mouseListener added for hover event:
                     @Override
                     public void mouseEntered(MouseEvent e) {
-                        hoverMove();
+                        if (board[row][col].getBackground() != Color.red){ //makes sure we can't simulate play of an out of bounds move
+                            hoverMove(board, row, col);
+                        }
                     }
                     //mouseListener added for hover event:
                     @Override
                     public void mouseExited(MouseEvent e) {
-                        unHoverMove();
+                        unHoverMove(board, row, col);
                     }
 
                     //mouseListener added for click event:
@@ -42,12 +46,29 @@ public class GameLogic implements WinChecker{
                     public void mousePressed(MouseEvent e) {
                         //board[row][col].removeAll();
                         //board[row][col].getComponent(board[row][col])
-                        if(board[row][col].getComponentCount() == 0 && checkDimensions(boardWidthLoc1, boardWidthLoc2, boardHeightLoc1, boardHeightLoc2, row, col)) {
+                        if(board[row][col].getComponentCount() == 0 && checkDimensions(
+                                        boardWidthLoc1,
+                                        boardWidthLoc2, boardHeightLoc1,
+                                        boardHeightLoc2, row, col)
+                        ){
                             placeMove(board, fontSize, row, col);
                         }
 
                         //checkWinX(row);
                         //checkWin(board, innerBoxHeight, innerBoxWidth, row, col);
+
+
+
+                        //only when 5 rounds have passed can the be a win (otherwise each player has played less than 3x)
+                        //if(roundNum >= 5) {
+                            if(checkWin(board, board[row][col]) == 0){
+                                System.out.println("no win yet");
+                            }else{
+                                System.out.println("WINNNNNNNNNN");
+                            }   //uncomment the above if once done with checkWin()
+                        //}
+
+                        roundNum += 1;
                     }
                 });
             }
@@ -63,13 +84,69 @@ public class GameLogic implements WinChecker{
 
 
 
-    void hoverMove(){
-        //System.out.println("was hovered!");
+
+    //needed in the colorPanels() function when we need to color either the rows or columns
+    void valueSwapperFunction(int[] valueSwapper, int i, int j, boolean isRow){
+        if(isRow){
+            valueSwapper[0] = j;
+            valueSwapper[1] = i;
+        } else{
+            valueSwapper[0] = i;
+            valueSwapper[1] = j;
+        }
     }
 
-    void unHoverMove(){
-        //System.out.println("was unhovered!");
+    //this function can be used to color both rows and columns (it's versatile)
+    void colorPanels(JPanel[][] board, int rowORcol, Color color, boolean isRow){
+        int[] valueSwapper = new int[2];
+        if(rowORcol == 0){
+            for(int i = 0; i < 5; i++){
+                for(int j = 3; j < 5; j++){
+                    valueSwapperFunction(valueSwapper, i, j, isRow);
+                    if(board[valueSwapper[0]][valueSwapper[1]].getBackground() != Color.red) {
+                        board[valueSwapper[0]][valueSwapper[1]].setBackground(color);
+                    }
+                }
+            }
+        } else if(rowORcol == 1){
+            for(int i = 0; i < 5; i++){
+                valueSwapperFunction(valueSwapper, i, 4, isRow);
+                if(board[valueSwapper[0]][valueSwapper[1]].getBackground() != Color.red) {
+                    board[valueSwapper[0]][valueSwapper[1]].setBackground(color);
+                }
+            }
+        } else if(rowORcol == 3){
+            for(int i = 0; i < 5; i++){
+                valueSwapperFunction(valueSwapper, i, 0, isRow);
+                if(board[valueSwapper[0]][valueSwapper[1]].getBackground() != Color.red) {
+                    board[valueSwapper[0]][valueSwapper[1]].setBackground(color);
+                }
+            }
+        }else if(rowORcol == 4){
+            for(int i = 0; i < 5; i++){
+                for(int j = 0; j < 2; j++){
+                    valueSwapperFunction(valueSwapper, i, j, isRow);
+                    if(board[valueSwapper[0]][valueSwapper[1]].getBackground() != Color.red) {
+                        board[valueSwapper[0]][valueSwapper[1]].setBackground(color);
+                    }
+                }
+            }
+        }
     }
+
+    void hoverMove(JPanel[][] board, int row, int col){
+        colorPanels(board, row, Color.pink, true); //colors rows
+        colorPanels(board, col, Color.pink, false); //colors columns
+    }
+
+    void unHoverMove(JPanel[][] board, int row, int col){
+        colorPanels(board, row, Color.gray, true); //colors rows
+        colorPanels(board, col, Color.gray, false); //colors columns
+    }
+
+
+
+
 
     void placeMove(JPanel[][] board, int fontSize, int row, int col){
         JPanel tempPanel = board[row][col];
@@ -127,7 +204,6 @@ public class GameLogic implements WinChecker{
         JLabel[] boxText = new JLabel[3];
         for(int i = 0; i < 3; i++){
             boxText[i] = (JLabel) board[0][i].getComponent(0);
-
         }
         if (Objects.equals(boxText[0].getText(), "X") && Objects.equals(boxText[1].getText(), "X") && Objects.equals(boxText[2].getText(), "X")) {
             System.out.println("WINNNNN!!!!!!!!!!!!");
@@ -218,8 +294,8 @@ public class GameLogic implements WinChecker{
                     board[i][4].setBackground(Color.red);
                 }
             } else if (isVertical) {
-                for (int j = 0; j < 5; j++) {
-                    board[4][j].setBackground(Color.red);
+                for (int i = 0; i < 5; i++) {
+                    board[4][i].setBackground(Color.red);
                 }
             }
 
@@ -227,8 +303,8 @@ public class GameLogic implements WinChecker{
             axis.edge1 += 1;
 
             if(isVertical) {
-                for (int j = 0; j < 5; j++) {
-                    board[0][j].setBackground(Color.red);
+                for (int i = 0; i < 5; i++) {
+                    board[0][i].setBackground(Color.red);
                 }
             } else if (!isVertical) {
                 for (int i = 0; i < 5; i++) {
@@ -271,39 +347,53 @@ public class GameLogic implements WinChecker{
 
     //implemented as interface for future ease of testing
     @Override
-    public void checkWinX(int row) {
-        //round 5 is the first round a win is possible
-        //System.out.println(innerBoxWidth);
-        //System.out.println(roundNum);
-        if(roundNum >= 5){
-            //System.out.println(row);
-            if(innerBoxWidth == 3){
-                //System.out.println("check for win horizontally");
-            }
+    public int checkWin(JPanel[][] board, JPanel panel) {
+        Component[] components = panel.getComponents();
+        JLabel label = (JLabel) components[0];
+
+        int i = 0;
+        int j = 0;
+
+        if(board[i][j].getComponentCount() == 0){
+            return 0;
+        } else {
+            checkX(board, i, j, label);
+            checkY(board, i, j, label);
+            checkDiagonal(board, i, j, label);
 
         }
+
+
+
+
+
+
+
+
+
+        return 0;
     }
 
-    @Override
-    public void checkWinY(int col){
-        //System.out.println(innerBoxHeight);
-        if(roundNum >= 5){
-            if(innerBoxHeight == 3){
-                //System.out.println("check for win vertically");
-            }
-        }
+
+
+    private boolean checkX(JPanel[][] board, int i, int j, JLabel label) {
+
+        System.out.println(label.getText().equals("X"));
+
+        //if()
+
+        return false;
     }
 
+    private boolean checkY(JPanel[][] board, int i, int j, JLabel label) {
 
+        return false;
+    }
 
+    private boolean checkDiagonal(JPanel[][] board, int i, int j, JLabel label) {
 
-
-
-
-
-
-
-
+        return false;
+    }
 
 
 
