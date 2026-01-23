@@ -1,6 +1,8 @@
 /*
 to push to github in terminal:
 
+test
+
 1. cd into the folder
 2. run 'git status'
 3. run 'git checkout changes'   -> switches branches to 'changes' branch
