@@ -19,9 +19,11 @@ public class GameBoardTest {
     private myFrame frame;
     private GameLogic game;
 
-    //can't automate these tests with a for loop because it will cause a win
+
     private int deltaX = 0;
     private int deltaY = 0;
+    //can't automate these tests with a for loop because it will cause a win
+    //the "magic numbers" here are default coordinates placed in a specific pattern to not cause a win
     private void createBoxNoWin(int deltaY, int deltaX){
         clickPanel(2 + deltaY, 2 + deltaX);
         clickPanel(0 + deltaY, 0 + deltaX);
