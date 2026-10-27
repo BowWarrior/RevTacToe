@@ -1,5 +1,7 @@
 //get rid up duplicate code in updateDimension
 //make winchecker
+//setFont is causing major lag spike
+//refactor my tests
 
 import javax.swing.*;
 import java.awt.*;
@@ -22,9 +24,9 @@ public class GameLogic implements RecursiveWinChecker{
     private int roundNum = 0;   //keeps track of how many total turns have passed
 
     GameLogic(JPanel[][] board, JFrame frame){
+        int fontSize = getFontSize(frame);
         for(int i = 0; i < 5; i++){
             for (int j = 0; j < 5; j++){
-                int fontSize = getFontSize(frame);
                 final int row = i;
                 final int col = j;
                 board[row][col].addMouseListener(new MouseAdapter() {
